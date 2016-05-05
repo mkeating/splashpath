@@ -9,18 +9,16 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<!--<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	</header>-->
 
-	<div class="entry-content landing-content">
+	<div class="landing-content">
 		<?php
-			the_content();
-
-			
+			the_content();	
 		?>
 	</div><!-- .entry-content -->
 
 	
-</article><!-- #post-## -->
+</section><!-- #post-## -->
