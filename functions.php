@@ -7,6 +7,17 @@
  * @package nhs3_s
  */
 
+
+function debug_to_console( $data ) {
+
+    if ( is_array( $data ) )
+        $output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
+    else
+        $output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
+
+    echo $output;
+}
+
 if ( ! function_exists( 'nhs3_s_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -119,6 +130,10 @@ function nhs3_s_scripts() {
 	//Adding fonts
 	wp_enqueue_style( 'nhs-fonts', 'https://fonts.googleapis.com/css?family=Raleway|Merriweather' );
 
+	//Adding Jquery
+	
+	//wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js' , array('jquery'), '', true );
+
 	//Adding Bootstrap
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css');
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array('jquery'), '', true );
@@ -146,10 +161,11 @@ function landing_section() {
 		);
 
 	$args = array(
-		'labels'		=> $labels,
-		'description'	=> 'Content blocks for single landing page',
-		'public'		=> true,
-		'menu_position'	=> 5,
+		'labels'				=> $labels,
+		'description'			=> 'Content blocks for single landing page',
+		'public'				=> true,
+		'menu_position'			=> 5,
+		'register_meta_box_cb' 	=> 'add_landing_metaboxes'
 		);
 
 	register_post_type('landing_section', $args);
@@ -157,6 +173,59 @@ function landing_section() {
 
 add_action('init', 'landing_section');
 
+function add_landing_metaboxes() {
+
+	debug_to_console("adding meta");
+	add_meta_box('landing_bg', 'Landing Section Background', 'landing_bg', 'landing_section', 'normal', 'default' );
+}
+
+
+//display metabox
+function landing_bg() {
+	global $post;
+
+	debug_to_console("displaying meta");
+
+	echo '<input type="hidden" name="landingmeta_noncename" id="landingmeta_noncename" value="'.wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+
+	$background = get_post_meta($post->ID, '_background', true);
+
+	echo '<input type="text" name="_background" value="' . $background . '" class="widefat" />';
+}
+
+//save metabox data
+function save_landing_meta($post_id, $post) {
+
+	debug_to_console("saving meta");
+
+
+	//verify source
+	if ( !wp_verify_nonce( $_POST['landingmeta_noncename'], plugin_basename(__FILE__) )) {
+		return $post->ID;
+	}
+
+	//check user auth
+	if ( !current_user_can('edit_post', $post->ID))
+		return $post->ID;
+
+	$landing_meta['_background'] = $_POST['_background'];
+
+	foreach( $landing_meta as $key => $value) {
+		if( $post->post_type == 'revision') return; //dont store custom data twice
+		$value = implode(',', (array)$value); //if $value is an array, make it a CSV
+		if(get_post_meta($post->ID, $key, FALSE)){//if the custom field already has a value
+			update_post_meta($post->ID, $key, $value);
+		} else {
+			add_post_meta($post->ID, $key, $value);
+		}
+		if(!$value) delete_post_meta($post->ID, $key); //delete if blank
+	}		
+}
+
+add_action('save_post', 'save_landing_meta', 1, 2);
+add_action('edit_post', 'save_landing_meta', 1, 2);
+add_action('publish_post', 'save_landing_meta', 1, 2);
+add_action('edit_page_form', 'save_landing_meta', 1, 2);
 
 
 /**
