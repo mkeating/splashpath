@@ -176,7 +176,9 @@ add_action('init', 'landing_section');
 function add_landing_metaboxes() {
 
 	debug_to_console("adding meta");
-	add_meta_box('landing_bg', 'Landing Section Background', 'landing_bg', 'landing_section', 'normal', 'default' );
+	add_meta_box('landing_bg_img', 'Landing Section Background Image', 'landing_bg_img', 'landing_section', 'normal', 'default' );
+	add_meta_box('landing_bg', 'Landing Section Background Color', 'landing_bg', 'landing_section', 'normal', 'default' );
+	
 }
 
 
@@ -191,6 +193,19 @@ function landing_bg() {
 	$background = get_post_meta($post->ID, '_background', true);
 
 	echo '<input type="text" name="_background" value="' . $background . '" class="widefat" />';
+}
+
+
+function landing_bg_img() {
+	global $post;
+
+	debug_to_console("displaying meta");
+
+	echo '<input type="hidden" name="landingmeta_noncename" id="landingmeta_noncename" value="'.wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+
+	$background_img = get_post_meta($post->ID, '_background_img', true);
+
+	echo '<input type="text" name="_background_img" value="' . $background_img . '" class="widefat" />';
 }
 
 //save metabox data
@@ -209,6 +224,7 @@ function save_landing_meta($post_id, $post) {
 		return $post->ID;
 
 	$landing_meta['_background'] = $_POST['_background'];
+	$landing_meta['_background_img'] = $_POST['_background_img'];
 
 	foreach( $landing_meta as $key => $value) {
 		if( $post->post_type == 'revision') return; //dont store custom data twice
@@ -252,3 +268,4 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+

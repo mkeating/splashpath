@@ -27,20 +27,14 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<?php
 
-	
+
+		<?php
+			//get custom header image and add it to site-header
+
 				$bg_image = get_header_image();
 				debug_to_console($bg_image);		
 		?>
-
-		<script type="text/javascript">
-				jQuery(function($) {
-				
-					//$("site-header").css('background-image', 'url(<?php echo $bg_image; ?>) no-repeat center center fixed'); 
-				
-			});
-		</script>
 
 		<style type="text/css">
 
@@ -72,6 +66,7 @@
 			endif; ?>
 
 			<div class="site-social"> Social stuff here </div>
+			<button class="btn"> NEXT </button>
 		</div><!-- .site-branding -->
 
 		<!--<nav id="site-navigation" class="main-navigation" role="navigation">
