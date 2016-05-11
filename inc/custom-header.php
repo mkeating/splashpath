@@ -20,6 +20,8 @@
  *
  * @uses nhs3_s_header_style()
  */
+
+
 function nhs3_s_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'nhs3_s_custom_header_args', array(
 		'default-image'          => '',
@@ -41,6 +43,17 @@ if ( ! function_exists( 'nhs3_s_header_style' ) ) :
 function nhs3_s_header_style() {
 	$header_text_color = get_header_textcolor();
 
+
+		/*$bg_image = header_image();
+			debug_to_console("customheader" . gettype($bg_image));
+
+
+		 if ( get_header_image() ) : 
+		
+			$bg_image = header_image();
+			debug_to_console("customheader" . gettype($bg_image));
+	 	endif; // End header image check. 
+
 	/*
 	 * If no custom options for text are set, let's bail.
 	 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: HEADER_TEXTCOLOR.
@@ -52,12 +65,19 @@ function nhs3_s_header_style() {
 	// If we get this far, we have custom styles. Let's do this.
 	?>
 	<style type="text/css">
+		
+		
+
 	<?php
+
+	
 		// Has the text been hidden?
+
 		if ( ! display_header_text() ) :
 	?>
 		.site-title,
 		.site-description {
+			
 			position: absolute;
 			clip: rect(1px, 1px, 1px, 1px);
 		}

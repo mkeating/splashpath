@@ -27,8 +27,7 @@
 				var background = <?php echo json_encode(get_post_meta($post->ID, "_background", true));?> ;
 
 				$("#"+ID).css('background-color', background); 
-				console.log( background ); 
-				console.log(ID); 
+				
 			});
 
 			
