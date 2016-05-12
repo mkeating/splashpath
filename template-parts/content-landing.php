@@ -15,38 +15,57 @@
 	</header>-->
 
 	<div class="landing-content">
-		<?php
-			the_content();	
-			
-		?>
 
-		<script type="text/javascript">
+		<div class="row-fluid">
+			<?php
+				the_content();	
+				
+			?>
 
-			jQuery(function($) {
-				var ID = <?php echo json_encode($post->post_name);?> ;
-				var background = <?php echo json_encode(get_post_meta($post->ID, "_background", true));?> ;
-				var background_image = <?php echo json_encode(get_post_meta($post->ID, "_background_img", true));?> ;
+			<script type="text/javascript">
 
-				console.log(background_image);
+				jQuery(function($) {
+					var ID = <?php echo json_encode($post->post_name);?> ;
+					var background = <?php echo json_encode(get_post_meta($post->ID, "_background", true));?> ;
+					var background_image = <?php echo json_encode(get_post_meta($post->ID, "_background_img", true));?> ;
 
-				if(!background_image){
-					$("#"+ID).css('background-color', background); 
-				}
-				else{
-					$("#"+ID).css('background', 'url('+ background_image + ') no-repeat center center '); 
-					$("#"+ID).css('-webkit-background-size', 'cover');
-					$("#"+ID).css('-moz-background-size:', 'cover');
-					$("#"+ID).css('-o-background-size', 'cover');
-					$("#"+ID).css('background-size', 'cover');
+					//console.log(background_image);
 
-				}
-					
-			});
+					if(!background_image){
+						$("#"+ID).css('background-color', background); 
+					}
+					else{
+						$("#"+ID).css('background', 'url('+ background_image + ') no-repeat center center '); 
+						$("#"+ID).css('-webkit-background-size', 'cover');
+						$("#"+ID).css('-moz-background-size:', 'cover');
+						$("#"+ID).css('-o-background-size', 'cover');
+						$("#"+ID).css('background-size', 'cover');
 
-			
+					}
 
-		</script>
-		
+					var next_target = <?php echo json_encode(get_post_meta($post->ID, "_nxt_btn_target", true));?> ;
+						console.log("next target:" + next_target);
+						$("#<?php echo $post->post_name.'-btn';?>").click(function(){
+								console.log("btn clicked; going to " + next_target);
+								console.log('#'+next_target);
+							event.preventDefault;
+							jQuery( "html, body" ).animate({scrollTop: $("#"+next_target).offset().top  }, 800);
+							return false; 
+							});
+
+
+						
+				});
+
+				
+
+			</script>
+			<button id="<?php echo $post->post_name.'-btn';?>" class="btn ">NEXT</button>
+				<script type="text/javascript">
+
+
+				</script>
+		</div>
 	</div><!-- .entry-content -->
 
 	

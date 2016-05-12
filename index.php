@@ -30,6 +30,8 @@ get_header(); ?>
 
 		$args = array(
 			'post_type' => 'landing_section',
+			'orderby' 	=> 'order',
+			'order'		=> 'ASC'
 			);
 
 		$landing_sections = new WP_Query($args);
@@ -42,12 +44,13 @@ get_header(); ?>
 				$landing_sections->the_post();
 				
 				?>
+				<div class="row-fluid">
 				<!--<div class="landing-section">-->
 					<?php
 						get_template_part( 'template-parts/content-landing', get_post_format() );
 					?>
 				<!--</div>-->
-
+				</div>
 				<?php
 			}
 		}
