@@ -65,8 +65,49 @@
 			<?php
 			endif; ?>
 
-			<div class="site-social"> Social stuff here </div>
-			<button class="btn"> NEXT </button>
+			<div class="site-social"> 
+
+
+				<?php
+
+					$facebook =  get_theme_mod( 'facebook_textbox' );
+					$twitter =  get_theme_mod( 'twitter_textbox');
+					$instagram =  get_theme_mod( 'instagram_textbox');
+					$linkedin =  get_theme_mod( 'linkedin_textbox');
+
+					debug_to_console($facebook);
+
+					if( $facebook != NULL ){
+						?>
+						<a href="<?php echo $facebook; ?>" ><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+					<?php
+					}
+
+
+					if( $twitter != NULL ){
+						?>
+						<a href="<?php echo $twitter; ?>" ><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+					<?php
+					}
+
+
+					if( $instagram != NULL ){
+						?>
+						<a href="<?php echo $instagram; ?>" ><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<?php
+					}
+
+					if( $linkedin != NULL ){
+						?>
+						<a href="<?php echo $linkedin; ?>" ><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+					<?php
+					}
+				?>
+
+				 
+
+			</div>
+			<button class="btn"> <?php echo get_theme_mod( 'button_textbox', 'No text saved yet' ); ?> </button>
 		</div><!-- .site-branding -->
 
 		<!--<nav id="site-navigation" class="main-navigation" role="navigation">

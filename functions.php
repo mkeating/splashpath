@@ -129,10 +129,9 @@ function nhs3_s_scripts() {
 
 	//Adding fonts
 	wp_enqueue_style( 'nhs-fonts', 'https://fonts.googleapis.com/css?family=Raleway|Merriweather' );
-
-	//Adding Jquery
 	
-	//wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js' , array('jquery'), '', true );
+	//Font-Awesome glyphs
+	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 	//Adding Bootstrap
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css');
@@ -265,6 +264,122 @@ add_action('edit_page_form', 'save_landing_meta', 1, 2);
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
+
+/**
+	*	Add custom header additional fields
+	*
+	*/
+function header_text_customizer( $wp_customize ) {
+    
+    //CTA button options
+
+    $wp_customize->add_section(
+        'header_section_one',
+        array(
+            'title' => 'Header Call to Action Button',
+            'description' => 'Call to Action button',
+            'priority' => 35,
+        )
+    );
+
+    $wp_customize->add_setting(
+    	'button_textbox',
+    	array(
+    	    'default' => 'Learn More!',
+    	)
+	);
+
+	$wp_customize->add_control(
+   		'button_textbox',
+   	 	array(
+   	   	  'label' => 'Text for Call to Action button',
+   	   	  'section' => 'header_section_one',
+   	   	  'type' => 'text',
+   	 	)
+	);
+
+	//Social
+	$wp_customize->add_section(
+        'header_section_two',
+        array(
+            'title' => 'Header Social Media',
+            'description' => 'Link to your social accounts',
+            'priority' => 35,
+        )
+    );
+
+	//FB
+    $wp_customize->add_setting(
+    	'facebook_textbox',
+    	array(
+    	    'default' => '',
+    	)
+	);
+
+	$wp_customize->add_control(
+   		'facebook_textbox',
+   	 	array(
+   	   	  'label' => 'Your Facebook Page',
+   	   	  'section' => 'header_section_two',
+   	   	  'type' => 'text',
+   	 	)
+	);
+
+	//TW
+	$wp_customize->add_setting(
+    	'twitter_textbox',
+    	array(
+    	    'default' => '',
+    	)
+	);
+
+	$wp_customize->add_control(
+   		'twitter_textbox',
+   	 	array(
+   	   	  'label' => 'Your Twitter Page',
+   	   	  'section' => 'header_section_two',
+   	   	  'type' => 'text',
+   	 	)
+	);
+
+
+	//INSTA
+	$wp_customize->add_setting(
+    	'instagram_textbox',
+    	array(
+    	    'default' => '',
+    	)
+	);
+
+	$wp_customize->add_control(
+   		'instagram_textbox',
+   	 	array(
+   	   	  'label' => 'Your Instagram Page',
+   	   	  'section' => 'header_section_two',
+   	   	  'type' => 'text',
+   	 	)
+	);
+
+	//LINKEDIN
+	$wp_customize->add_setting(
+    	'linkedin_textbox',
+    	array(
+    	    'default' => '',
+    	)
+	);
+
+	$wp_customize->add_control(
+   		'linkedin_textbox',
+   	 	array(
+   	   	  'label' => 'Your LinkedIn Page',
+   	   	  'section' => 'header_section_two',
+   	   	  'type' => 'text',
+   	 	)
+	);
+
+
+}
+add_action( 'customize_register', 'header_text_customizer' );
 
 /**
  * Custom template tags for this theme.
