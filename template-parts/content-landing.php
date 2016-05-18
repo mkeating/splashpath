@@ -44,6 +44,14 @@
 					}
 
 					var next_target = <?php echo json_encode(get_post_meta($post->ID, "_nxt_btn_target", true));?> ;
+
+					//if next_target, add the next button
+
+					if(next_target != '') {
+
+						$( "#<?php echo $post->post_name?> > .landing-content" ).append( "<button id='<?php echo $post->post_name.'-btn';?>' class='btn' >NEXT</button>" );
+
+					}
 						console.log("next target:" + next_target);
 						$("#<?php echo $post->post_name.'-btn';?>").click(function(){
 								console.log("btn clicked; going to " + next_target);
@@ -60,7 +68,7 @@
 				
 
 			</script>
-			<button id="<?php echo $post->post_name.'-btn';?>" class="btn ">NEXT</button>
+			
 				<script type="text/javascript">
 
 
