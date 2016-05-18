@@ -110,7 +110,41 @@
 			<button class="btn"> <?php echo get_theme_mod( 'button_textbox', 'No text saved yet' ); ?> </button>
 		</div><!-- .site-branding -->
 
-		<!--<nav id="site-navigation" class="main-navigation" role="navigation">
+		<!-- New nav test-->
+		<nav class="navbar navbar-default" role="navigation"> 
+		<!-- Brand and toggle get grouped for better mobile display --> 
+		  <div class="navbar-header"> 
+		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> 
+		      <span class="sr-only">Toggle navigation</span> 
+		      <span class="icon-bar"></span> 
+		      <span class="icon-bar"></span> 
+		      <span class="icon-bar"></span> 
+		    </button> 
+		    <a class="navbar-brand" href="<?php bloginfo('url')?>"><?php bloginfo('name')?></a>
+		  </div> 
+		  <!-- Collect the nav links, forms, and other content for toggling --> 
+		  <div class="collapse navbar-collapse navbar-ex1-collapse"> 
+		    <?php /* Primary navigation */
+				wp_nav_menu( array(
+				  'menu' => 'main-nav',
+				  'depth' => 2,
+				  'container' => false,
+				  'menu_class' => 'nav navbar-nav',
+				  //Process nav menu using our custom nav walker
+				  'walker' => new wp_bootstrap_navwalker())
+				);
+				?>
+		  </div>
+		</nav>
+
+
+
+
+		
+
+
+
+		<!--<nav id="site-navigation" class="main-navigation navbar navbar-default" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'nhs3_s' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->

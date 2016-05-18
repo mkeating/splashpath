@@ -90,6 +90,16 @@ function nhs3_s_setup() {
 }
 endif;
 add_action( 'after_setup_theme', 'nhs3_s_setup' );
+	
+	
+	//Custom Navigation
+
+	if( ! function_exists('nhs3_s_setup') ):
+		function nhs3_s_setup() {
+			register_nav_menu( 'primary', __( 'Primary navigation', 'nhs3_nav') );
+		} endif;
+
+	require_once('wp_bootstrap_navwalker.php');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -380,6 +390,8 @@ function header_text_customizer( $wp_customize ) {
 
 }
 add_action( 'customize_register', 'header_text_customizer' );
+
+
 
 /**
  * Custom template tags for this theme.
