@@ -107,41 +107,28 @@
 				 
 
 			</div>
-			<button class="btn"> <?php echo get_theme_mod( 'button_textbox', 'No text saved yet' ); ?> </button>
+			<button class="btn" id="cta-btn"> <?php echo get_theme_mod( 'button_textbox', 'No text saved yet' ); ?> </button>
+
+			
+			<script type="text/javascript">
+
+				jQuery("#cta-btn").click(function(){
+								
+							event.preventDefault;
+							jQuery( "html, body" ).animate({scrollTop: jQuery("#main").offset().top  }, 800);
+							return false; 
+							});
+
+			</script>
 		</div><!-- .site-branding -->
-
-		<!-- New nav test-->
-		<nav class="navbar navbar-default" role="navigation"> 
-		<!-- Brand and toggle get grouped for better mobile display --> 
-		  <div class="navbar-header"> 
-		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> 
-		      <span class="sr-only">Toggle navigation</span> 
-		      <span class="icon-bar"></span> 
-		      <span class="icon-bar"></span> 
-		      <span class="icon-bar"></span> 
-		    </button> 
-		    <a class="navbar-brand" href="<?php bloginfo('url')?>"><?php bloginfo('name')?></a>
-		  </div> 
-		  <!-- Collect the nav links, forms, and other content for toggling --> 
-		  <div class="collapse navbar-collapse navbar-ex1-collapse"> 
-		    <?php /* Primary navigation */
-				wp_nav_menu( array(
-				  'menu' => 'main-nav',
-				  'depth' => 2,
-				  'container' => false,
-				  'menu_class' => 'nav navbar-nav',
-				  //Process nav menu using our custom nav walker
-				  'walker' => new wp_bootstrap_navwalker())
-				);
-				?>
-		  </div>
-		</nav>
-
-
-
 
 		
 
+		
+		<?php
+			get_template_part( 'template-parts/sticky-nav', get_post_format() );
+
+			?>
 
 
 		<!--<nav id="site-navigation" class="main-navigation navbar navbar-default" role="navigation">

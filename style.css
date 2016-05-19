@@ -276,7 +276,7 @@ input,
 select,
 textarea {
 	color: #000;
-	font-family: 'Merriweather', serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -685,6 +685,26 @@ a:active {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+.navbar {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.fixed {
+
+	position: fixed; 
+	top: 0; 
+	height: 70px; 
+	z-index: 1;
+	width: 100%;
+}
+
+.menu-buffer {
+	background-color: green;
+	min-height:70px;
 }
 
 /*--------------------------------------------------------------

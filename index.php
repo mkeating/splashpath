@@ -38,6 +38,25 @@ get_header(); ?>
 
 		if( $landing_sections->have_posts() ){
 
+			?>
+			<script type="text/javascript">
+			
+				   jQuery(document).ready(function($){
+					   $(window).bind('scroll', function() {
+					   var navHeight = $( window ).height() - 70;
+							 if ($(window).scrollTop() > navHeight) {
+								 $('nav').addClass('fixed');
+							 }
+							 else {
+								 $('nav').removeClass('fixed');
+							 }
+						});
+					});
+
+			</script>
+			<?php
+
+			$count = 0;
 			while( $landing_sections->have_posts() ){
 
 
@@ -45,13 +64,23 @@ get_header(); ?>
 				
 				?>
 				<div class="row-fluid">
-				<!--<div class="landing-section">-->
+				
 					<?php
+
+					if($count == 0) {
+					//adds the nav bar to the first landing section
+					//get_template_part( 'template-parts/sticky-nav', get_post_format() );
+					}
+
+
+					
 						get_template_part( 'template-parts/content-landing', get_post_format() );
 					?>
-				<!--</div>-->
 				</div>
+
+
 				<?php
+				$count++;
 			}
 		}
 

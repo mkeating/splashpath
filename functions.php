@@ -135,13 +135,10 @@ add_action( 'widgets_init', 'nhs3_s_widgets_init' );
  * Enqueue scripts and styles.
  */
 function nhs3_s_scripts() {
-	wp_enqueue_style( 'nhs3_s-style', get_stylesheet_uri() );
-
-	//Adding fonts
-	wp_enqueue_style( 'nhs-fonts', 'https://fonts.googleapis.com/css?family=Raleway|Merriweather' );
 	
-	//Font-Awesome glyphs
-	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+
+	
 
 	//Adding Bootstrap
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css');
@@ -150,6 +147,19 @@ function nhs3_s_scripts() {
 	wp_enqueue_script( 'nhs3_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'nhs3_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+
+
+	
+
+	//Adding fonts
+	wp_enqueue_style( 'nhs-fonts', 'https://fonts.googleapis.com/css?family=Raleway|Merriweather' );
+	
+	//Font-Awesome glyphs
+	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+	//Main theme styles
+	wp_enqueue_style( 'nhs3_s-style', get_stylesheet_uri() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

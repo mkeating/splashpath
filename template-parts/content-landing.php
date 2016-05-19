@@ -14,6 +14,8 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header>-->
 
+	<div class="menu-buffer"> </div>
+
 	<div class="landing-content">
 
 		<div class="row-fluid">
