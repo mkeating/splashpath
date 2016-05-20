@@ -845,6 +845,50 @@ a:active {
 	font-size: 4em;
 }
 
+
+#cta-btn {
+
+	margin-bottom: 10%;
+	-webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+	border-radius: none;
+	background-color: red;
+	width: 300px;
+	color: white;
+}
+
+#cta-btn:hover {
+	-webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+    background-color: yellow;
+}
+
+#sec-btn {
+
+	margin-bottom: 10%;
+	-webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+	border-radius: none;
+	background-color: blue;
+	width: 250px;
+	color: white;
+}
+
+#sec-btn:hover {
+	-webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+    background-color: yellow;
+}
+
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -887,7 +931,7 @@ a:active {
 
 .menu-buffer {
 	position: relative;
-	background-color: green;
+	background: none;
 	min-height:50px;
 	clear:both;
 }

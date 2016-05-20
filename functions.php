@@ -318,6 +318,8 @@ function header_text_customizer( $wp_customize ) {
    	 	)
 	);
 
+	
+
 	//Social
 	$wp_customize->add_section(
         'header_section_two',
@@ -328,74 +330,102 @@ function header_text_customizer( $wp_customize ) {
         )
     );
 
-	//FB
-    $wp_customize->add_setting(
-    	'facebook_textbox',
-    	array(
-    	    'default' => '',
-    	)
-	);
+		//FB
+	    $wp_customize->add_setting(
+	    	'facebook_textbox',
+	    	array(
+	    	    'default' => '',
+	    	)
+		);
 
-	$wp_customize->add_control(
-   		'facebook_textbox',
-   	 	array(
-   	   	  'label' => 'Your Facebook Page',
-   	   	  'section' => 'header_section_two',
-   	   	  'type' => 'text',
-   	 	)
-	);
+		$wp_customize->add_control(
+	   		'facebook_textbox',
+	   	 	array(
+	   	   	  'label' => 'Your Facebook Page',
+	   	   	  'section' => 'header_section_two',
+	   	   	  'type' => 'text',
+	   	 	)
+		);
 
-	//TW
-	$wp_customize->add_setting(
-    	'twitter_textbox',
-    	array(
-    	    'default' => '',
-    	)
-	);
+		//TW
+		$wp_customize->add_setting(
+	    	'twitter_textbox',
+	    	array(
+	    	    'default' => '',
+	    	)
+		);
 
-	$wp_customize->add_control(
-   		'twitter_textbox',
-   	 	array(
-   	   	  'label' => 'Your Twitter Page',
-   	   	  'section' => 'header_section_two',
-   	   	  'type' => 'text',
-   	 	)
-	);
+		$wp_customize->add_control(
+	   		'twitter_textbox',
+	   	 	array(
+	   	   	  'label' => 'Your Twitter Page',
+	   	   	  'section' => 'header_section_two',
+	   	   	  'type' => 'text',
+	   	 	)
+		);
 
 
-	//INSTA
-	$wp_customize->add_setting(
-    	'instagram_textbox',
-    	array(
-    	    'default' => '',
-    	)
-	);
+		//INSTA
+		$wp_customize->add_setting(
+	    	'instagram_textbox',
+	    	array(
+	    	    'default' => '',
+	    	)
+		);
 
-	$wp_customize->add_control(
-   		'instagram_textbox',
-   	 	array(
-   	   	  'label' => 'Your Instagram Page',
-   	   	  'section' => 'header_section_two',
-   	   	  'type' => 'text',
-   	 	)
-	);
+		$wp_customize->add_control(
+	   		'instagram_textbox',
+	   	 	array(
+	   	   	  'label' => 'Your Instagram Page',
+	   	   	  'section' => 'header_section_two',
+	   	   	  'type' => 'text',
+	   	 	)
+		);
 
-	//LINKEDIN
-	$wp_customize->add_setting(
-    	'linkedin_textbox',
-    	array(
-    	    'default' => '',
-    	)
-	);
+		//LINKEDIN
+		$wp_customize->add_setting(
+	    	'linkedin_textbox',
+	    	array(
+	    	    'default' => '',
+	    	)
+		);
 
-	$wp_customize->add_control(
-   		'linkedin_textbox',
-   	 	array(
-   	   	  'label' => 'Your LinkedIn Page',
-   	   	  'section' => 'header_section_two',
-   	   	  'type' => 'text',
-   	 	)
-	);
+		$wp_customize->add_control(
+	   		'linkedin_textbox',
+	   	 	array(
+	   	   	  'label' => 'Your LinkedIn Page',
+	   	   	  'section' => 'header_section_two',
+	   	   	  'type' => 'text',
+	   	 	)
+		);
+
+		//Secondary button options
+
+	    $wp_customize->add_section(
+	        'header_section_three',
+	        array(
+	            'title' => 'Header Secondary Button',
+	            'description' => 'Secondary button',
+	            'priority' => 35,
+	        )
+	    );
+
+	    $wp_customize->add_setting(
+	    	'sec_button_textbox',
+	    	array(
+	    	    'default' => 'Login',
+	    	)
+		);
+
+		$wp_customize->add_control(
+	   		'sec_button_textbox',
+	   	 	array(
+	   	   	  'label' => 'Text for Secondary button',
+	   	   	  'section' => 'header_section_three',
+	   	   	  'type' => 'text',
+	   	 	)
+		);
+
 
 
 }
