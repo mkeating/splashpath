@@ -18,11 +18,14 @@
 
 	<div class="landing-content">
 
-		<div class="row-fluid">
-			<?php
-				the_content();	
+		<div class="row-fluid content-row">
+			
+				<?php
+					the_content();	
 				
-			?>
+				?>
+		</div>		
+		<div class="row-fluid button-row text-center"></div>
 
 			<script type="text/javascript">
 
@@ -51,7 +54,8 @@
 
 					if(next_target != '') {
 
-						$( "#<?php echo $post->post_name?> > .landing-content" ).append( "<button id='<?php echo $post->post_name.'-btn';?>' class='btn' >NEXT</button>" );
+						$( "#<?php echo $post->post_name?> > .landing-content > .button-row" )
+							.append( "<button id='<?php echo $post->post_name.'-btn';?>' class='btn btn-default landing-section-btn' >NEXT</button>" );
 
 					}
 						console.log("next target:" + next_target);
@@ -75,7 +79,7 @@
 
 
 				</script>
-		</div>
+		
 	</div><!-- .entry-content -->
 
 	

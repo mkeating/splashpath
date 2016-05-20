@@ -692,11 +692,15 @@ a:active {
 	position: absolute;
 	bottom: 0;
 	margin-bottom: 0;
+	border-radius: 0;
 
 }
 
-.fixed {
+.navbar-brand {
+	display: none;
+}
 
+.fixed {
 	position: fixed; 
 	top: 0; 
 	height: 50px; 
@@ -858,10 +862,67 @@ a:active {
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-## Global
+## Landing sections
 --------------------------------------------------------------*/
 
+.landing_section {
+	display: block;
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	margin-bottom: 0;
+}
 
+.landing-content {
+	display: block;
+	position: relative;
+	height: 90%;
+	width: 90%;
+	margin: auto;
+	top: 0; bottom: 0; left: 0; right: 0;
+	border: 1px solid black;
+	color: green;
+	text-align: center;
+}
+
+.menu-buffer {
+	position: relative;
+	background-color: green;
+	min-height:50px;
+	clear:both;
+}
+
+.button-row{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.landing-section-btn {
+
+	margin-bottom: 10%;
+	-webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+	border-radius: none;
+	background-color: blue;
+	width: 300px;
+	color: white;
+}
+
+.landing-section-btn:hover {
+	-webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+    background-color: yellow;
+}
+
+
+/*--------------------------------------------------------------
+## Global
+--------------------------------------------------------------*/
 
 .site-main {
 	/*margin: 1.4em;*/
@@ -897,35 +958,14 @@ a:active {
 }
 
 
-/*--------------------------------------------------------------
-## Landing sections
---------------------------------------------------------------*/
+@media screen and (max-width: 320px) {
+	/*max-width: 45em;
+	margin: 1.8 em auto;*/
 
-.landing_section {
-	display: block;
-	height: 100vh;
-	width: 100%;
-	position: relative;
-	margin-bottom: 0;
 }
 
-.landing-content {
-	display: block;
-	position: relative;
-	height: 90%;
-	width: 90%;
-	margin: auto;
-	top: 0; bottom: 0; left: 0; right: 0;
-	border: 1px solid black;
-	color: green;
-}
 
-.menu-buffer {
-	position: relative;
-	background-color: green;
-	min-height:50px;
-	clear:both;
-}
+
 
 /*--------------------------------------------------------------
 ## Posts and pages
