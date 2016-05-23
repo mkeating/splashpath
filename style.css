@@ -815,10 +815,25 @@ a:active {
 	top:50%;
 	left: 50%;
  	transform: translate(-50%, -50%);
-	height: 40%;
-	width: 40%;
+	height: 50%;
+	width: 50%;
 
 }
+
+@media screen and (max-width: 800px) {
+		.site-branding {
+		position: absolute;
+		top:50%;
+		left: 50%;
+	 	transform: translate(-50%, -50%);
+		height: 70%;
+		width: 70%;
+
+	}
+
+}
+
+
 
 @media screen and (max-width: 630px) {
 		.site-branding {

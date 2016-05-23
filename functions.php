@@ -182,7 +182,12 @@ function landing_section() {
 	$args = array(
 		'labels'				=> $labels,
 		'description'			=> 'Content blocks for single landing page',
-		'public'				=> true,
+		'public'				=> false,
+		'has_archive'			=> false,
+		'publicly_queriable'	=> true,
+		'has_archive'			=> false,
+		'rewrite'				=> false,
+		'show_ui' 				=> true,
 		'menu_position'			=> 5,
 		'register_meta_box_cb' 	=> 'add_landing_metaboxes',
 		'supports' => array('title', 'editor', 'page-attributes', 'order'),
