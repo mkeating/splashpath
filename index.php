@@ -42,15 +42,30 @@ get_header(); ?>
 			<script type="text/javascript">
 			
 				   jQuery(document).ready(function($){
-					   $(window).bind('scroll', function() {
-					   var navHeight = $( window ).height() - 70;
-							 if ($(window).scrollTop() > navHeight) {
-								 $('nav').addClass('fixed');
-								 $(".navbar-brand").css('display', 'inline');
-							 }
-							 else {
-								 $('nav').removeClass('fixed');
-							 }
+					   $(window).bind('scroll', function(e) {
+
+						   //nav sticks to bottom at home, then top on scroll down
+						   var navHeight = $( window ).height() - 70;
+								 if ($(window).scrollTop() > navHeight) {
+									 $('nav').addClass('fixed');
+									 $(".navbar-brand").css('display', 'inline');
+								 }
+								 else {
+									 $('nav').removeClass('fixed');
+								 }
+
+							//update hash on scroll
+							$('section').each(function(){
+								if( 
+									$(this).offset().top < window.pageYOffset + 10  
+									&& $(this).offset().top + $(this).height() > window.pageYOffset + 10 ){
+										window.location.hash = $(this).attr('id');
+								}
+							});
+							//remove hash when on the header
+							if($(window).scrollTop() == 0){
+								history.replaceState({}, document.title, ".");
+							}						
 						});
 					});
 

@@ -271,6 +271,18 @@ function save_landing_meta($post_id, $post) {
 			add_post_meta($post->ID, $key, $value);
 		}
 		if(!$value) delete_post_meta($post->ID, $key); //delete if blank
+	}
+
+	//make sure slugs/ids update on title changes
+
+	$new_slug = sanitize_title( $post->post_title );
+	if ( $post->post_name != $new_slug ){
+		wp_update_post(
+			array (
+				'ID'		=> $post->ID,
+				'post_name'	=> $new_slug
+				)
+			);
 	}		
 }
 

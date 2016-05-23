@@ -34,7 +34,7 @@
 					var background = <?php echo json_encode(get_post_meta($post->ID, "_background", true));?> ;
 					var background_image = <?php echo json_encode(get_post_meta($post->ID, "_background_img", true));?> ;
 
-					//console.log(background_image);
+					console.log("id: " + ID);
 
 					if(!background_image){
 						$("#"+ID).css('background-color', background); 

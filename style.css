@@ -820,6 +820,21 @@ a:active {
 
 }
 
+@media screen and (max-width: 630px) {
+		.site-branding {
+		border: none;
+		position: absolute;
+		top:50%;
+		left: 50%;
+	 	transform: translate(-50%, -50%);
+		
+		width: 100%;
+
+	}
+
+}
+
+
 .site-title { 
 	margin: 1.7em  1em 0;
 	font-family: 'Raleway', sans-serif;
@@ -856,6 +871,7 @@ a:active {
 	border-radius: none;
 	background-color: red;
 	width: 300px;
+	max-width: 100%;
 	color: white;
 }
 
@@ -877,6 +893,7 @@ a:active {
 	border-radius: none;
 	background-color: blue;
 	width: 250px;
+	max-width: 100%;
 	color: white;
 }
 
@@ -949,9 +966,11 @@ a:active {
     box-shadow: none;
     -webkit-transition: none;
     transition: none;
-	border-radius: none;
+	border-radius: 0;
 	background-color: blue;
-	width: 300px;
+	height: 60px;
+	width: 60%;
+	min-width: 260px;
 	color: white;
 }
 
