@@ -40,7 +40,7 @@
 		?>
 
 		<div class="headerBg">
-			<img  src-set="<?php echo $bg_small; ?> 320w, <?php echo $bg_med; ?> 700w, <?php echo $bg_large; ?> 1200w" sizes="100vw">
+			<img  srcset="<?php echo $bg_small; ?> 320w, <?php echo $bg_med; ?> 700w, <?php echo $bg_large; ?> 1200w" sizes="100vw">
 		
 		</div>
 		

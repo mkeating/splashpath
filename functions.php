@@ -512,6 +512,7 @@ add_action( 'customize_register', 'header_text_customizer' );
 
 
 
+
 /**
  * Custom template tags for this theme.
  */
