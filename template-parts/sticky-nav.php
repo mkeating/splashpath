@@ -24,12 +24,13 @@
 		  <div class="collapse navbar-collapse navbar-ex1-collapse"> 
 		    <?php /* Primary navigation */
 				wp_nav_menu( array(
-				  'menu' => 'main-nav',
-				  'depth' => 2,
-				  'container' => false,
-				  'menu_class' => 'nav navbar-nav pull-right',
+				  'menu' 			=> 'main-nav',
+				  'depth' 			=> 3,
+				  'container'		=> false,
+				  'container_class'	=> 'collapse navbar-collapse navbar-ex1-collapse',
+				  'menu_class' 		=> 'nav navbar-nav pull-right',
 				  //Process nav menu using our custom nav walker
-				  'walker' => new wp_bootstrap_navwalker())
+				  'walker' 		=> new wp_bootstrap_navwalker())
 				);
 				?>
 		  </div>

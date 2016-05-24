@@ -26,18 +26,27 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'nhs3_s' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-
-
-
 		<?php
 			//get custom header image and add it to site-header
 
 				$bg_image = get_header_image();
-				debug_to_console($bg_image);		
+				//debug_to_console($bg_image);	
+
+				$bg_large = get_theme_mod( 'bg_large' );
+				$bg_med = get_theme_mod( 'bg_med' );
+				$bg_small = get_theme_mod( 'bg_small' );
+
+				//debug_to_console("bg large: ".$bg_large);	
 		?>
 
-		<style type="text/css">
+		<div class="headerBg">
+			<img  src-set="<?php echo $bg_small; ?> 320w, <?php echo $bg_med; ?> 700w, <?php echo $bg_large; ?> 1200w" sizes="100vw">
+		
+		</div>
+		
 
+		<style type="text/css">
+		/*
 			.site-header {
 				background: url(<?php echo $bg_image; ?>) no-repeat center center fixed ;
 				-webkit-background-size: cover;
@@ -45,12 +54,16 @@
 				-o-background-size: cover;
 				background-size: cover;
 			}
-
+		*/
 		</style>
 
 		
 		<div class="site-branding">
+			
+			<img src="<?php echo get_theme_mod( 'site_logo' ); ?>" class="logo">
 			<?php
+
+
 
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

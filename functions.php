@@ -308,8 +308,70 @@ require get_template_directory() . '/inc/custom-header.php';
 	*/
 function header_text_customizer( $wp_customize ) {
     
-    //CTA button options
+	//add logo
 
+	$wp_customize->add_section(
+		'header_section_four',
+		array(
+            'title' => 'Site Logo',
+            'description' => 'Your Brand Logo',
+            'priority' => 35,
+        )
+	);
+
+	$wp_customize->add_setting('site_logo');
+
+	$wp_customize->add_control(new WP_Customize_Upload_Control($wp_customize,'site_logo',array(
+		 'label'      => __('Site Logo', 'nhs3_s'),
+		 'section'    => 'header_section_four',
+		 'settings'   => 'site_logo',
+		 )
+		)
+	);
+
+	
+	//responsive background image
+	$wp_customize->add_section(
+		'header_section_five',
+		array(
+            'title' => 'Responsive Header Background',
+            'description' => 'Images for responsive header',
+            'priority' => 35,
+        )
+	);
+
+	$wp_customize->add_setting('bg_large');
+
+	$wp_customize->add_control(new WP_Customize_Upload_Control($wp_customize,'bg_large',array(
+		 'label'      => __('Large Background', 'nhs3_s'),
+		 'section'    => 'header_section_five',
+		 'settings'   => 'bg_large',
+		 )
+		)
+	);
+
+	$wp_customize->add_setting('bg_med');
+
+	$wp_customize->add_control(new WP_Customize_Upload_Control($wp_customize,'bg_med',array(
+		 'label'      => __('Medium Background', 'nhs3_s'),
+		 'section'    => 'header_section_five',
+		 'settings'   => 'bg_med',
+		 )
+		)
+	);
+
+	$wp_customize->add_setting('bg_small');
+
+	$wp_customize->add_control(new WP_Customize_Upload_Control($wp_customize,'bg_small',array(
+		 'label'      => __('Small Background', 'nhs3_s'),
+		 'section'    => 'header_section_five',
+		 'settings'   => 'bg_small',
+		 )
+		)
+	);
+
+
+    //CTA button options
     $wp_customize->add_section(
         'header_section_one',
         array(
