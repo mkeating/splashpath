@@ -30,32 +30,19 @@
 			//get custom header image and add it to site-header
 
 				$bg_image = get_header_image();
-				//debug_to_console($bg_image);	
+				
 
 				$bg_large = get_theme_mod( 'bg_large' );
 				$bg_med = get_theme_mod( 'bg_med' );
 				$bg_small = get_theme_mod( 'bg_small' );
 
-				//debug_to_console("bg large: ".$bg_large);	
+				
 		?>
 
 		<div class="headerBg">
 			<img  srcset="<?php echo $bg_small; ?> 320w, <?php echo $bg_med; ?> 700w, <?php echo $bg_large; ?> 1200w" sizes="100vw">
 		
 		</div>
-		
-
-		<style type="text/css">
-		/*
-			.site-header {
-				background: url(<?php echo $bg_image; ?>) no-repeat center center fixed ;
-				-webkit-background-size: cover;
-				-moz-background-size: cover;
-				-o-background-size: cover;
-				background-size: cover;
-			}
-		*/
-		</style>
 
 		
 		<div class="site-branding">

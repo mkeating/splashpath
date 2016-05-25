@@ -135,23 +135,17 @@ add_action( 'widgets_init', 'nhs3_s_widgets_init' );
  * Enqueue scripts and styles.
  */
 function nhs3_s_scripts() {
-	
-
-
-	
-
-	//Adding Bootstrap
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css');
-	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array('jquery'), '', true );
 
 	wp_enqueue_script( 'nhs3_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'nhs3_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+	wp_enqueue_script( 'jquery' );
 
-
+	//Adding Bootstrap
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css');
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array( 'jquery' ) );
 	
-
 	//Adding fonts
 	wp_enqueue_style( 'nhs-fonts', 'https://fonts.googleapis.com/css?family=Raleway|Merriweather' );
 	

@@ -48,6 +48,7 @@ get_header(); ?>
 						   var navHeight = $( window ).height() - 70;
 								 if ($(window).scrollTop() > navHeight) {
 									 $('nav').addClass('fixed');
+									 $('nav').removeClass('navbar-fixed-bottom');
 									 $(".navbar-brand").css('display', 'inline');
 								 }
 								 else {
