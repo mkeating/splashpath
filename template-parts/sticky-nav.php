@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page.php.
+ * Template part for displaying sticky navigation for front page.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
