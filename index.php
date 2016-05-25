@@ -47,12 +47,18 @@ get_header(); ?>
 						   //nav sticks to bottom at home, then top on scroll down
 						   var navHeight = $( window ).height() - 70;
 								 if ($(window).scrollTop() > navHeight) {
-									 $('nav').addClass('fixed');
-									 $('nav').removeClass('navbar-fixed-bottom');
+									 //$('nav').addClass('fixed');
+
+									 
+									 $('nav').addClass('navbar-fixed-top');
 									 $(".navbar-brand").css('display', 'inline');
+									 $('nav').removeClass('sticky-header-nav');
 								 }
 								 else {
-									 $('nav').removeClass('fixed');
+									 //$('nav').removeClass('fixed');
+									 $('nav').addClass('sticky-header-nav');
+									 $('nav').removeClass('navbar-fixed-top');
+
 								 }
 
 							//update hash on scroll

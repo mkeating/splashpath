@@ -689,30 +689,45 @@ a:active {
 
 .navbar {
 	width: 100%;
+	
+
+}
+
+.sticky-header-nav {
 	position: absolute;
 	bottom: 0;
-	min-height: 50px;
 	margin-bottom: 0;
 	border-radius: 0;
-
 }
 
 .navbar-brand {
 	display: none;
 }
 
+/*
 .navbar-collapse {
 	position: relative;
+	width: 100%;
 	background-color: white;
 	margin: 0;
 }
 
-.navbar-collapse > ul {
-	width: 100%;
-	margin: 0 auto;
-	text-align: center;
-	line-height: 50px;
+
+*/
+
+/* mobile menu styling */
+@media only screen and (max-width : 767px) {
+	.navbar-collapse {
+		width: 100%;
+	}
+
+	.navbar-collapse > ul{
+		margin: 0 auto;
+		width: 100%;
+		text-align: center;
+	}
 }
+
 
 .fixed {
 	position: fixed; 
@@ -721,6 +736,7 @@ a:active {
 	height: 50px;
 	width: 100%;
 }
+
 
 
 
