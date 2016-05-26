@@ -17,6 +17,7 @@ get_template_part( 'template-parts/reg-nav', get_post_format() );?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+
 			<div class="container-fluid">
 
 			<?php
@@ -37,14 +38,9 @@ get_template_part( 'template-parts/reg-nav', get_post_format() );?>
 
 			</div>
 
-			
-
-		
-			
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
 //get_sidebar();
-get_footer();
+get_template_part( 'template-parts/sticky-footer', get_post_format() );

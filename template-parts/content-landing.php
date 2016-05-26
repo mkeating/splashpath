@@ -49,13 +49,15 @@
 					}
 
 					var next_target = <?php echo json_encode(get_post_meta($post->ID, "_nxt_btn_target", true));?> ;
+					var next_text = <?php echo json_encode(get_post_meta($post->ID, "_nxt_btn_text", true));?> ;
 
 					//if next_target, add the next button
 
 					if(next_target != '') {
 
 						$( "#<?php echo $post->post_name?> > .landing-content > .button-row" )
-							.append( "<button id='<?php echo $post->post_name.'-btn';?>' class='btn btn-default landing-section-btn' >NEXT</button>" );
+							.append( "<button id='<?php echo $post->post_name.'-btn';?>' class='btn btn-default landing-section-btn' >" + next_text + "</button>" );
+
 
 					}
 						console.log("next target:" + next_target);

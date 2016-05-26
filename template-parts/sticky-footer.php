@@ -1,10 +1,8 @@
 <?php
 /**
- * The template for displaying the footer.
+ * Template part for displaying sticky navigation for front page.
  *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package nhs3_s
  */
@@ -13,7 +11,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer site-footer-sticky" role="contentinfo">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'nhs3_s' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'nhs3_s' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
@@ -28,3 +26,4 @@
 
 
 </html>
+

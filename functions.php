@@ -195,10 +195,11 @@ add_action('init', 'landing_section');
 
 function add_landing_metaboxes() {
 
-	debug_to_console("adding meta");
 	add_meta_box('landing_bg_img', 'Landing Section Background Image', 'landing_bg_img', 'landing_section', 'normal', 'default' );
 	add_meta_box('landing_bg', 'Landing Section Background Color', 'landing_bg', 'landing_section', 'normal', 'default' );
+	add_meta_box('landing_nxt_btn_text', 'Next Button Text', 'landing_nxt_btn_text', 'landing_section', 'normal', 'default' );
 	add_meta_box('landing_nxt_btn_target', 'Next Button Target', 'landing_nxt_btn', 'landing_section', 'normal', 'default' );
+	
 }
 
 
@@ -206,7 +207,6 @@ function add_landing_metaboxes() {
 function landing_bg() {
 	global $post;
 
-	debug_to_console("displaying meta");
 
 	echo '<input type="hidden" name="landingmeta_noncename" id="landingmeta_noncename" value="'.wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
 
@@ -219,7 +219,7 @@ function landing_bg() {
 function landing_bg_img() {
 	global $post;
 
-	debug_to_console("displaying meta");
+
 
 	echo '<input type="hidden" name="landingmeta_noncename" id="landingmeta_noncename" value="'.wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
 
@@ -231,7 +231,6 @@ function landing_bg_img() {
 function landing_nxt_btn() {
 	global $post;
 
-	debug_to_console("displaying meta");
 
 	echo '<input type="hidden" name="landingmeta_noncename" id="landingmeta_noncename" value="'.wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
 
@@ -240,7 +239,16 @@ function landing_nxt_btn() {
 	echo '<input type="text" name="_nxt_btn_target" value="' . $nxt_btn_target . '" class="widefat" />';
 }
 
+function landing_nxt_btn_text() {
+	global $post;
 
+
+	echo '<input type="hidden" name="landingmeta_noncename" id="landingmeta_noncename" value="'.wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+
+	$nxt_btn_target = get_post_meta($post->ID, '_nxt_btn_text', true);
+
+	echo '<input type="text" name="_nxt_btn_text" value="' . $nxt_btn_text . '" class="widefat" />';
+}
 
 //save metabox data
 function save_landing_meta($post_id, $post) {
@@ -260,6 +268,7 @@ function save_landing_meta($post_id, $post) {
 	$landing_meta['_background'] = $_POST['_background'];
 	$landing_meta['_background_img'] = $_POST['_background_img'];
 	$landing_meta['_nxt_btn_target'] = $_POST['_nxt_btn_target'];
+	$landing_meta['_nxt_btn_text'] = $_POST['_nxt_btn_text'];
 
 	foreach( $landing_meta as $key => $value) {
 		if( $post->post_type == 'revision') return; //dont store custom data twice

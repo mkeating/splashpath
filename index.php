@@ -47,15 +47,13 @@ get_header(); ?>
 						   //nav sticks to bottom at home, then top on scroll down
 						   var navHeight = $( window ).height() - 70;
 								 if ($(window).scrollTop() > navHeight) {
-									 //$('nav').addClass('fixed');
 
-									 
 									 $('nav').addClass('navbar-fixed-top');
 									 $(".navbar-brand").css('display', 'inline');
 									 $('nav').removeClass('sticky-header-nav');
 								 }
 								 else {
-									 //$('nav').removeClass('fixed');
+									 
 									 $('nav').addClass('sticky-header-nav');
 									 $('nav').removeClass('navbar-fixed-top');
 
@@ -129,8 +127,10 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
+	
 	</div><!-- #primary -->
 
 <?php
 #get_sidebar();
-#get_footer();
+get_footer(); 
+

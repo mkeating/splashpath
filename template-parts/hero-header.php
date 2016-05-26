@@ -93,11 +93,11 @@
 
 			</div>
 
-
+			<button class="btn" id="sec-btn"> <?php echo get_theme_mod( 'sec_button_textbox', 'No text saved yet' ); ?> </button>
 
 			<button class="btn" id="cta-btn"> <?php echo get_theme_mod( 'button_textbox', 'No text saved yet' ); ?> </button>
 
-			<button class="btn" id="sec-btn"> <?php echo get_theme_mod( 'sec_button_textbox', 'No text saved yet' ); ?> </button>
+			
 
 		
 

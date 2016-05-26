@@ -53,12 +53,15 @@ html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
-	height: 100%;
+	min-height: 100%;
+	/*padding-bottom:60px;   /* Height of the footer */
 }
 
 body {
 	margin: 0;
-	height:100%;
+	min-height: 100%;
+	/*padding-bottom:60px;   /* Height of the footer */
+
 }
 
 article,
@@ -689,7 +692,7 @@ a:active {
 
 .navbar {
 	width: 100%;
-	
+	border-radius: 0;
 
 }
 
@@ -859,12 +862,15 @@ a:active {
  	transform: translate(-50%, -50%);
 	height: 50%;
 	width: 50%;
+	float: left;
+	background: gray;
 
 }
 
 .logo {
 	max-width: 100px;
 	max-height: 100px;
+	float: left;
 }
 
 @media screen and (max-width: 800px) {
@@ -898,9 +904,9 @@ a:active {
 
 
 .site-title { 
-	margin: 1.7em  1em 0;
+	margin: .7em  1em 0;
 	font-family: 'Raleway', sans-serif;
-	font-size: 2.4em;
+	font-size: 5em;
 	font-weight: bold;
 	line-height: 1.3em;
 	color: white;
@@ -910,6 +916,9 @@ a:active {
 .site-title a {
 	text-decoration: none;
 	color: white;
+}
+.site-description {
+	font-size: 2.5em;
 }
 
 
@@ -925,7 +934,7 @@ a:active {
 
 #cta-btn {
 
-	margin-bottom: 10%;
+
 	-webkit-box-shadow: none;
     box-shadow: none;
     -webkit-transition: none;
@@ -934,6 +943,7 @@ a:active {
 	background-color: red;
 	width: 300px;
 	max-width: 100%;
+	height: 60px;
 	color: white;
 }
 
@@ -947,7 +957,6 @@ a:active {
 
 #sec-btn {
 
-	margin-bottom: 10%;
 	-webkit-box-shadow: none;
     box-shadow: none;
     -webkit-transition: none;
@@ -972,11 +981,17 @@ a:active {
 --------------------------------------------------------------*/
 
 .site-footer {
-   position:absolute;
-   bottom:0;
+
    width:100%;
    height:60px;   
    text-align: right;
+   background: black;
+}
+
+.site-footer-sticky {
+   position:absolute;
+   bottom:0;
+  
 }
 
 
@@ -1043,7 +1058,7 @@ a:active {
 	border-radius: 0;
 	background-color: blue;
 	height: 60px;
-	width: 60%;
+	width: 40%;
 	min-width: 260px;
 	color: white;
 }
@@ -1062,12 +1077,19 @@ a:active {
 --------------------------------------------------------------*/
 
 /* allows for fullscreen pages */
+
+.clear {
+    clear:both;
+    line-height:0;
+}
+
 .site,
 .site-content,
 .content-area,
 .container-fluid, 
 .page {
 	height: 100%;
+	min-height: 100%;
 }
 
 .site-main {
