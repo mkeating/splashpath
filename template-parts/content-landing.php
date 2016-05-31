@@ -34,12 +34,10 @@
 					var background = <?php echo json_encode(get_post_meta($post->ID, "_background", true));?> ;
 					var background_image = <?php echo json_encode(get_post_meta($post->ID, "_background_img", true));?> ;
 
-					console.log("id: " + ID);
-
-					if(!background_image){
+					if(background){
 						$("#"+ID).css('background-color', background); 
 					}
-					else{
+					if(background_image){
 						$("#"+ID).css('background', 'url('+ background_image + ') no-repeat center center '); 
 						$("#"+ID).css('-webkit-background-size', 'cover');
 						$("#"+ID).css('-moz-background-size:', 'cover');
@@ -57,13 +55,11 @@
 
 						$( "#<?php echo $post->post_name?> > .landing-content > .button-row" )
 							.append( "<button id='<?php echo $post->post_name.'-btn';?>' class='btn btn-default landing-section-btn' >" + next_text + "</button>" );
-
+							console.log(next_text);
 
 					}
-						console.log("next target:" + next_target);
+						
 						$("#<?php echo $post->post_name.'-btn';?>").click(function(){
-								console.log("btn clicked; going to " + next_target);
-								console.log('#'+next_target);
 							event.preventDefault;
 							jQuery( "html, body" ).animate({scrollTop: $("#"+next_target).offset().top  }, 800);
 							return false; 

@@ -20,7 +20,9 @@
 				$bg_large = get_theme_mod( 'bg_large' );
 				$bg_med = get_theme_mod( 'bg_med' );
 				$bg_small = get_theme_mod( 'bg_small' );
-
+				debug_to_console($bg_small);
+				debug_to_console($bg_med);
+				debug_to_console($bg_large);
 				
 		?>
 
@@ -38,9 +40,9 @@
 
 
 			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title"><?php bloginfo( 'name' ); ?></p>
 			<?php
 			endif;
 
@@ -93,9 +95,18 @@
 
 			</div>
 
-			<button class="btn" id="sec-btn"> <?php echo get_theme_mod( 'sec_button_textbox', 'No text saved yet' ); ?> </button>
 
-			<button class="btn" id="cta-btn"> <?php echo get_theme_mod( 'button_textbox', 'No text saved yet' ); ?> </button>
+			<div class="buttons">
+				<div class="row-fluid">
+					<button class="btn" id="sec-btn"> <?php echo get_theme_mod( 'sec_button_textbox', 'No text saved yet' ); ?> </button>
+				</div>
+				<div class="row-fluid">
+					<button class="btn" id="cta-btn"> <?php echo get_theme_mod( 'button_textbox', 'No text saved yet' ); ?> </button>
+				</div>
+					
+			</div>
+
+			
 
 			
 

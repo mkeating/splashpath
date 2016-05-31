@@ -854,6 +854,7 @@ a:active {
 }
 
 .site-branding {
+	padding-top: 20px;
 	text-align: center;
 	border: 1px solid white;
 	position: absolute;
@@ -863,28 +864,55 @@ a:active {
 	height: 50%;
 	width: 50%;
 	float: left;
-	background: gray;
+	background: rgba(0, 0, 0, 0.3);
 
 }
 
+	@media screen and (max-width: 800px) {
+			.site-branding {
+			position: absolute;
+			top:50%;
+			left: 50%;
+		 	transform: translate(-50%, -50%);
+			height: 70%;
+			width: 70%;
+		}
+	}
+
+	@media screen and (max-width: 600px){
+		.site-branding {
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+
+
 .logo {
-	max-width: 100px;
-	max-height: 100px;
+
+	max-width: 150px;
+	max-height: 150px;
 	float: left;
 }
 
-@media screen and (max-width: 800px) {
-		.site-branding {
-		position: absolute;
-		top:50%;
-		left: 50%;
-	 	transform: translate(-50%, -50%);
-		height: 70%;
-		width: 70%;
+	@media screen and (max-width: 600px) {
+			.logo {
+				max-width: 80px;
+				max-height: 80px;
+				float: none;
+				margin: 0 auto;
+			}
+		}
+	@media screen and (max-height: 640px) {
+			.logo {
+				max-width: 100px;
+				max-height: 100px;
+				float: none;
+				margin: 0 auto;
+			}
+		}
 
-	}
 
-}
 
 
 
@@ -910,16 +938,38 @@ a:active {
 	font-weight: bold;
 	line-height: 1.3em;
 	color: white;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 
-.site-title a {
-	text-decoration: none;
+
+
+	@media screen and (max-width: 600px) {
+			.site-title {
+				margin: 0 .2em 0;
+				font-size: 3.7em;
+
+		}
+
+	}
+
+	@media screen and (min-height: 667px) {
+		.site-title {
+			margin: 1em 1em 0;
+		}
+
+	}
+
+
+.site-description {
+	font-size: 1.7em;
 	color: white;
 }
-.site-description {
-	font-size: 2.5em;
-}
+
+	@media screen and (max-width: 600px){
+		.site-description {
+			margin-bottom: .2em;
+		}
+	}
 
 
 .site-title a:hover {
@@ -932,6 +982,15 @@ a:active {
 }
 
 
+	@media screen and (min-height: 558px) {
+			.buttons {
+				margin-top: 20%;
+				margin-bottom: 20px;
+			}
+		}
+
+
+
 #cta-btn {
 
 
@@ -939,12 +998,15 @@ a:active {
     box-shadow: none;
     -webkit-transition: none;
     transition: none;
-	border-radius: none;
-	background-color: red;
+	border-radius: 0;
+	background:none;
+	border: 1px solid red;
 	width: 300px;
 	max-width: 100%;
 	height: 60px;
 	color: white;
+
+
 }
 
 #cta-btn:hover {
@@ -952,7 +1014,7 @@ a:active {
     box-shadow: none;
     -webkit-transition: none;
     transition: none;
-    background-color: yellow;
+    background-color: gray;
 }
 
 #sec-btn {
@@ -961,9 +1023,11 @@ a:active {
     box-shadow: none;
     -webkit-transition: none;
     transition: none;
-	border-radius: none;
-	background-color: blue;
+	border-radius: 0;
+	background:none;
+	border: 1px solid green;
 	width: 250px;
+	margin-bottom: 20px;
 	max-width: 100%;
 	color: white;
 }
@@ -973,7 +1037,7 @@ a:active {
     box-shadow: none;
     -webkit-transition: none;
     transition: none;
-    background-color: yellow;
+    background-color: gray;
 }
 
 /*--------------------------------------------------------------
@@ -985,7 +1049,8 @@ a:active {
    width:100%;
    height:60px;   
    text-align: right;
-   background: black;
+   background: #36454F;
+   color:white;
 }
 
 .site-footer-sticky {

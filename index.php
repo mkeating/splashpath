@@ -89,12 +89,9 @@ get_header(); ?>
 					<?php
 
 					if($count == 0) {
-					//adds the nav bar to the first landing section
-					//get_template_part( 'template-parts/sticky-nav', get_post_format() );
+					
 					}
 
-
-					
 						get_template_part( 'template-parts/content-landing', get_post_format() );
 					?>
 				</div>
