@@ -39,12 +39,12 @@
 
 
 
-			if ( is_front_page() && is_home() ) : ?>
+			/*if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 			<?php else : ?>
 				<p class="site-title"><?php bloginfo( 'name' ); ?></p>
 			<?php
-			endif;
+			endif;*/
 
 			$description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>

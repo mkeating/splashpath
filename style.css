@@ -868,7 +868,7 @@ a:active {
 
 }
 
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: 830px) {
 			.site-branding {
 			position: absolute;
 			top:50%;
@@ -879,11 +879,25 @@ a:active {
 		}
 	}
 
-	@media screen and (max-width: 600px){
+	/*@media screen and (max-width: 600px){
 		.site-branding {
-			height: 100%;
+			
 			width: 100%;
 		}
+	}*/
+
+	@media screen and (max-width: 630px) {
+			.site-branding {
+			border: none;
+			position: absolute;
+			top:50%;
+			left: 50%;
+		 	transform: translate(-50%, -50%);
+			height: 100%;
+			width: 100%;
+
+		}
+
 	}
 
 
@@ -892,6 +906,7 @@ a:active {
 
 	max-width: 150px;
 	max-height: 150px;
+	margin: 10px;
 	float: left;
 }
 
@@ -913,24 +928,6 @@ a:active {
 		}
 
 
-
-
-
-@media screen and (max-width: 630px) {
-		.site-branding {
-		border: none;
-		position: absolute;
-		top:50%;
-		left: 50%;
-	 	transform: translate(-50%, -50%);
-		
-		width: 100%;
-
-	}
-
-}
-
-
 .site-title { 
 	margin: .7em  1em 0;
 	font-family: 'Raleway', sans-serif;
@@ -938,7 +935,6 @@ a:active {
 	font-weight: bold;
 	line-height: 1.3em;
 	color: white;
-	/*text-transform: uppercase;*/
 }
 
 
@@ -946,7 +942,7 @@ a:active {
 	@media screen and (max-width: 600px) {
 			.site-title {
 				margin: 0 .2em 0;
-				font-size: 3.7em;
+				font-size: 2.5em;
 
 		}
 
@@ -961,12 +957,15 @@ a:active {
 
 
 .site-description {
-	font-size: 1.7em;
-	color: white;
+	font-size: 2.7em;
+	color: white !important;
+	
 }
+
 
 	@media screen and (max-width: 600px){
 		.site-description {
+			font-size: 1.6em;
 			margin-bottom: .2em;
 		}
 	}
@@ -981,6 +980,10 @@ a:active {
 	font-size: 4em;
 }
 
+.site-social a {
+	text-decoration: none;
+	color: white;
+}
 
 	@media screen and (min-height: 558px) {
 			.buttons {
@@ -998,23 +1001,45 @@ a:active {
     box-shadow: none;
     -webkit-transition: none;
     transition: none;
+     -moz-user-select: none;
+    background-color: #de4f4f;
+    background-image: none;
+    border: 1px solid transparent;
 	border-radius: 0;
-	background:none;
-	border: 1px solid red;
-	width: 300px;
-	max-width: 100%;
-	height: 60px;
+	line-height: 1.62857;
+	min-width: 180px;
+	width: 60%;
+	max-width: 90%;
+	height: 80px;
 	color: white;
+	font-size: 3.5em;
+	font-weight: 300;
+	text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+
 
 
 }
+
+@media screen and (max-height: 558px) {
+			#cta-btn {
+				font-size: 2.5em;
+			}
+		}
+
+@media screen and (max-width: 558px) {
+			#cta-btn {
+				font-size: 2.5em;
+			}
+		}
 
 #cta-btn:hover {
 	-webkit-box-shadow: none;
     box-shadow: none;
     -webkit-transition: none;
     transition: none;
-    background-color: gray;
 }
 
 #sec-btn {
@@ -1023,13 +1048,24 @@ a:active {
     box-shadow: none;
     -webkit-transition: none;
     transition: none;
+    background-color: #317873;
+    background-image: none;
+    border: 1px solid transparent;
 	border-radius: 0;
-	background:none;
-	border: 1px solid green;
-	width: 250px;
 	margin-bottom: 20px;
-	max-width: 100%;
+	max-width: 90%;
 	color: white;
+	line-height: 1.62857;
+	min-width: 160px;
+	width: 60%;
+	height: 60px;
+	color: white;
+	font-size: 2.5em;
+	font-weight: 300;
+	text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
 }
 
 #sec-btn:hover {
@@ -1037,7 +1073,7 @@ a:active {
     box-shadow: none;
     -webkit-transition: none;
     transition: none;
-    background-color: gray;
+    background-color: green;
 }
 
 /*--------------------------------------------------------------
