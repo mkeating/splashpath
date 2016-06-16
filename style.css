@@ -690,10 +690,44 @@ a:active {
 	width: 50%;
 }
 
-.navbar {
+.navbar-custom {
 	width: 100%;
 	border-radius: 0;
+	background-color: #36454F;
+	border: none;
+	margin-bottom: 0;
+}
 
+.navbar-header {
+	min-height: 60px;
+}
+
+.navbar-nav li a {
+    line-height: 70px;
+    height: 70px;
+    padding-top: 0;
+}
+
+.navbar-nav.pull-right > li > a:hover {
+	background-color: #36454F !important;
+	border-bottom: 2px solid #de4f4f;
+	color: #de4f4f;
+}
+
+.menu-item.active > a {
+	border-bottom: 2px solid #de4f4f;
+	color: #de4f4f;
+}
+
+
+.menu-item > a {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: white;
+	min-width: 80px;
+	height: 100%;
+	text-align: center;
 }
 
 .sticky-header-nav {
@@ -705,6 +739,12 @@ a:active {
 
 .navbar-brand {
 	display: none;
+	height: 100%;
+	padding: 5px;
+}
+
+.brand-logo {
+	height: 60px;
 }
 
 
@@ -854,7 +894,7 @@ a:active {
 }
 
 .site-branding {
-	padding-top: 20px;
+	padding: 20px;
 	text-align: center;
 	border: 1px solid white;
 	position: absolute;
@@ -985,14 +1025,12 @@ a:active {
 	color: white;
 }
 
-	@media screen and (min-height: 558px) {
-			.buttons {
-				margin-top: 20%;
-				margin-bottom: 20px;
-			}
-		}
-
-
+@media screen and (min-height: 558px) {
+	.buttons {
+		margin-top: 10%;
+		margin-bottom: 20px;
+	}	
+}
 
 #cta-btn {
 
@@ -1040,6 +1078,7 @@ a:active {
     box-shadow: none;
     -webkit-transition: none;
     transition: none;
+    background-color: #bd2323;
 }
 
 #sec-btn {
@@ -1073,7 +1112,7 @@ a:active {
     box-shadow: none;
     -webkit-transition: none;
     transition: none;
-    background-color: green;
+    background-color: #1b423f;
 }
 
 /*--------------------------------------------------------------
@@ -1131,7 +1170,6 @@ a:active {
 	width: 90%;
 	margin: auto;
 	top: 0; bottom: 0; left: 0; right: 0;
-	border: 1px solid black;
 	color: green;
 	text-align: center;
 }
@@ -1139,7 +1177,8 @@ a:active {
 .menu-buffer {
 	position: relative;
 	background: none;
-	min-height:50px;
+	min-height:60px;
+	height: 70px;
 	clear:both;
 }
 
@@ -1151,17 +1190,27 @@ a:active {
 
 .landing-section-btn {
 
-	margin-bottom: 10%;
+	margin-bottom: 20px;
 	-webkit-box-shadow: none;
     box-shadow: none;
     -webkit-transition: none;
     transition: none;
-	border-radius: 0;
-	background-color: blue;
-	height: 60px;
-	width: 40%;
-	min-width: 260px;
+    background-color: #317873;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 0;
 	color: white;
+	line-height: 1.62857;
+	min-width: 160px;
+	width: 50%;
+	height: 80px;
+	color: white;
+	font-size: 2.5em;
+	font-weight: 300;
+	text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
 }
 
 .landing-section-btn:hover {
@@ -1169,7 +1218,9 @@ a:active {
     box-shadow: none;
     -webkit-transition: none;
     transition: none;
-    background-color: yellow;
+    background-color: #1b423f;
+    color: white;
+    border: 1px solid transparent;
 }
 
 

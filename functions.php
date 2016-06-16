@@ -207,7 +207,6 @@ function add_landing_metaboxes() {
 function landing_bg() {
 	global $post;
 
-
 	echo '<input type="hidden" name="landingmeta_noncename" id="landingmeta_noncename" value="'.wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
 
 	$background = get_post_meta($post->ID, '_background', true);
@@ -219,8 +218,6 @@ function landing_bg() {
 function landing_bg_img() {
 	global $post;
 
-
-
 	echo '<input type="hidden" name="landingmeta_noncename" id="landingmeta_noncename" value="'.wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
 
 	$background_img = get_post_meta($post->ID, '_background_img', true);
@@ -230,7 +227,6 @@ function landing_bg_img() {
 
 function landing_nxt_btn() {
 	global $post;
-
 
 	echo '<input type="hidden" name="landingmeta_noncename" id="landingmeta_noncename" value="'.wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
 
@@ -242,10 +238,9 @@ function landing_nxt_btn() {
 function landing_nxt_btn_text() {
 	global $post;
 
-
 	echo '<input type="hidden" name="landingmeta_noncename" id="landingmeta_noncename" value="'.wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
 
-	$nxt_btn_target = get_post_meta($post->ID, '_nxt_btn_text', true);
+	$nxt_btn_text = get_post_meta($post->ID, '_nxt_btn_text', true);
 
 	echo '<input type="text" name="_nxt_btn_text" value="' . $nxt_btn_text . '" class="widefat" />';
 }
@@ -284,8 +279,8 @@ function save_landing_meta($post_id, $post) {
 	if ( $post->post_name != $new_slug ){
 		wp_update_post(
 			array (
-				'ID'		=> $post->ID,
-				'post_name'	=> $new_slug
+				'ID'			=> $post->ID,
+				'post_name'		=> $new_slug,
 				)
 			);
 	}		

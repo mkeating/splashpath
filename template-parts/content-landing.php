@@ -19,7 +19,7 @@
 	<div class="landing-content">
 
 		<div class="row-fluid content-row">
-			
+			<h1> <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?> </h1>
 				<?php
 					the_content();	
 				
@@ -55,7 +55,7 @@
 
 						$( "#<?php echo $post->post_name?> > .landing-content > .button-row" )
 							.append( "<button id='<?php echo $post->post_name.'-btn';?>' class='btn btn-default landing-section-btn' >" + next_text + "</button>" );
-							console.log(next_text);
+							console.log('next text:' + next_text);
 
 					}
 						
@@ -63,13 +63,8 @@
 							event.preventDefault;
 							jQuery( "html, body" ).animate({scrollTop: $("#"+next_target).offset().top  }, 800);
 							return false; 
-							});
-
-
-						
+							});	
 				});
-
-				
 
 			</script>
 			
