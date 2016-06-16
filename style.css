@@ -1170,8 +1170,8 @@ a:active {
 	width: 90%;
 	margin: auto;
 	top: 0; bottom: 0; left: 0; right: 0;
-	color: green;
-	text-align: center;
+	font-size: 1.3em;
+
 }
 
 .menu-buffer {

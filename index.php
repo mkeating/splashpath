@@ -44,6 +44,8 @@ get_header(); ?>
 				   jQuery(document).ready(function($){
 					   $(window).bind('scroll', function(e) {
 
+					   		//console.log(e);
+
 						   //nav sticks to bottom at home, then top on scroll down
 						   var navHeight = $( window ).height() - 70;
 								 if ($(window).scrollTop() > navHeight) {
@@ -60,11 +62,14 @@ get_header(); ?>
 								 }
 
 							//update hash on scroll
+
 							$('section').each(function(){
 								if( 
 									$(this).offset().top < window.pageYOffset + 10  
 									&& $(this).offset().top + $(this).height() > window.pageYOffset + 10 ){
-										window.location.hash = $(this).attr('id');
+										//this supports older browsers but causes an annoying jump on scroll up
+										//window.location.hash = $(this).attr('id');
+										history.pushState(null, null, $(this).attr('id'));
 								}
 							});
 							//remove hash when on the header
