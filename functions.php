@@ -475,6 +475,7 @@ function header_text_customizer( $wp_customize ) {
 
 		//Secondary button options
 
+			
 	    $wp_customize->add_section(
 	        'header_section_three',
 	        array(
@@ -484,6 +485,7 @@ function header_text_customizer( $wp_customize ) {
 	        )
 	    );
 
+	    //Button Text
 	    $wp_customize->add_setting(
 	    	'sec_button_textbox',
 	    	array(
@@ -495,6 +497,40 @@ function header_text_customizer( $wp_customize ) {
 	   		'sec_button_textbox',
 	   	 	array(
 	   	   	  'label' => 'Text for Secondary button',
+	   	   	  'section' => 'header_section_three',
+	   	   	  'type' => 'text',
+	   	 	)
+		);
+
+		//Button Target
+	    $wp_customize->add_setting(
+	    	'sec_button_target',
+	    	array(
+	    	    'default' => '/login',
+	    	)
+		);
+
+		$wp_customize->add_control(
+	   		'sec_button_target',
+	   	 	array(
+	   	   	  'label' => 'Target for Secondary button',
+	   	   	  'section' => 'header_section_three',
+	   	   	  'type' => 'text',
+	   	 	)
+		);
+
+		//Button Label
+	    $wp_customize->add_setting(
+	    	'sec_button_label',
+	    	array(
+	    	    'default' => '',
+	    	)
+		);
+
+		$wp_customize->add_control(
+	   		'sec_button_label',
+	   	 	array(
+	   	   	  'label' => 'Label for Secondary button',
 	   	   	  'section' => 'header_section_three',
 	   	   	  'type' => 'text',
 	   	 	)

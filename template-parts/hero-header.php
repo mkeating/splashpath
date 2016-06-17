@@ -32,7 +32,7 @@
 		</div>
 
 		
-		<div class="site-branding">
+		<div class="site-branding ">
 			
 			<img src="<?php echo get_theme_mod( 'site_logo' ); ?>" class="logo">
 			<?php
@@ -98,7 +98,8 @@
 
 			<div class="buttons">
 				<div class="row-fluid">
-					<button class="btn" id="sec-btn"> <?php echo get_theme_mod( 'sec_button_textbox', 'No text saved yet' ); ?> </button>
+					<div id="sec-btn-label"><?php echo get_theme_mod( 'sec_button_label' ); ?></div>
+					<a class="btn" id="sec-btn" href="<?php echo site_url().get_theme_mod( 'sec_button_target' ); ?>"> <?php echo get_theme_mod( 'sec_button_textbox', 'No text saved yet' ); ?> </a>
 				</div>
 				<div class="row-fluid">
 					<button class="btn" id="cta-btn"> <?php echo get_theme_mod( 'button_textbox', 'No text saved yet' ); ?> </button>

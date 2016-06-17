@@ -69,7 +69,7 @@ get_header(); ?>
 									&& $(this).offset().top + $(this).height() > window.pageYOffset + 10 ){
 										//this supports older browsers but causes an annoying jump on scroll up
 										//window.location.hash = $(this).attr('id');
-										history.pushState(null, null, $(this).attr('id'));
+										history.pushState(null, null, '#' + $(this).attr('id'));
 								}
 							});
 							//remove hash when on the header

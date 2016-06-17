@@ -761,6 +761,25 @@ a:active {
 	}
 }
 
+.navbar-toggle {
+	border: 1px solid white;
+	background-image: none!important;
+	 -webkit-box-shadow: none!important;
+    	-moz-box-shadow: none!important;
+             box-shadow: none!important;
+  
+    text-shadow: none!important;
+  
+	  -webkit-border-radius: 0!important;
+	     -moz-border-radius: 0!important;
+	          border-radius: 0!important;
+
+}
+
+.navbar-toggle span {
+	background-color: white;
+}
+
 
 .fixed {
 	position: fixed; 
@@ -895,14 +914,15 @@ a:active {
 
 .site-branding {
 	padding: 20px;
-	text-align: center;
-	border: 1px solid white;
 	position: absolute;
+	padding: 20px;
 	top:50%;
 	left: 50%;
  	transform: translate(-50%, -50%);
 	height: 50%;
 	width: 50%;
+	text-align: center;
+	border: 1px solid white;
 	float: left;
 	background: rgba(0, 0, 0, 0.3);
 
@@ -1018,6 +1038,9 @@ a:active {
 
 .site-social {
 	font-size: 4em;
+	text-align: center;
+	width: 100%;
+	float: left;
 }
 
 .site-social a {
@@ -1033,8 +1056,6 @@ a:active {
 }
 
 #cta-btn {
-
-
 	-webkit-box-shadow: none;
     box-shadow: none;
     -webkit-transition: none;
@@ -1049,8 +1070,10 @@ a:active {
 	width: 60%;
 	max-width: 90%;
 	height: 80px;
+	padding: 10px;
 	color: white;
 	font-size: 3.5em;
+	font-size: 3vw;
 	font-weight: 300;
 	text-align: center;
     text-transform: uppercase;
@@ -1064,6 +1087,12 @@ a:active {
 @media screen and (max-height: 558px) {
 			#cta-btn {
 				font-size: 2.5em;
+			}
+		}
+
+@media screen and (max-width: 1033px) {
+			#cta-btn {
+				font-size: 3em;
 			}
 		}
 
@@ -1113,6 +1142,13 @@ a:active {
     -webkit-transition: none;
     transition: none;
     background-color: #1b423f;
+}
+
+#sec-btn-label {
+	width: 100%;
+	color: white;
+	font-size: 2em;
+	margin=bottom: 5px;
 }
 
 /*--------------------------------------------------------------
@@ -1201,7 +1237,7 @@ a:active {
     border-radius: 0;
 	color: white;
 	line-height: 1.62857;
-	min-width: 160px;
+	min-width: 200px;
 	width: 50%;
 	height: 80px;
 	color: white;
@@ -1213,6 +1249,12 @@ a:active {
     white-space: nowrap;
 }
 
+@media screen and (max-width: 558px) {
+			.landing-section-btn {
+				width: 80%;
+			}
+		}
+
 .landing-section-btn:hover {
 	-webkit-box-shadow: none;
     box-shadow: none;
@@ -1223,6 +1265,12 @@ a:active {
     border: 1px solid transparent;
 }
 
+/*--------------------------------------------------------------
+## Registration
+--------------------------------------------------------------*/
+.login-box {
+	border: 1px solid black;
+}
 
 /*--------------------------------------------------------------
 ## Global
@@ -1233,6 +1281,16 @@ a:active {
 .clear {
     clear:both;
     line-height:0;
+}
+
+.center-box {
+	position: absolute;
+	padding: 20px;
+	top:50%;
+	left: 50%;
+ 	transform: translate(-50%, -50%);
+	height: 50%;
+	width: 50%;
 }
 
 .site,
