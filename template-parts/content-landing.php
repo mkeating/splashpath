@@ -14,19 +14,18 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header>-->
 
-	<div class="menu-buffer"> </div>
-
 	<div class="landing-content">
+		<div class="menu-buffer"> </div>
 
-		<div class="row-fluid content-row">
-			<h1> <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?> </h1>
-				<?php
-					the_content();	
-				
-				?>
-		</div>		
-		<div class="row-fluid button-row text-center"></div>
-
+			<div class="row-fluid content-row">
+				<h1> <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?> </h1>
+					<?php
+						the_content();	
+					
+					?>
+			</div>		
+			<div class="row-fluid button-row text-center"></div>
+	
 			<script type="text/javascript">
 
 				jQuery(function($) {

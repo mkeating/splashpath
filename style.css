@@ -53,13 +53,14 @@ html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
-	min-height: 100%;
+	height: 100%;
 	/*padding-bottom:60px;   /* Height of the footer */
 }
 
 body {
 	margin: 0;
-	min-height: 100%;
+	height: 100%;
+	font-size: 16px;
 	/*padding-bottom:60px;   /* Height of the footer */
 
 }
@@ -921,6 +922,7 @@ a:active {
  	transform: translate(-50%, -50%);
 	height: 50%;
 	width: 50%;
+	max-width: 500px;
 	text-align: center;
 	border: 1px solid white;
 	float: left;
@@ -939,13 +941,6 @@ a:active {
 		}
 	}
 
-	/*@media screen and (max-width: 600px){
-		.site-branding {
-			
-			width: 100%;
-		}
-	}*/
-
 	@media screen and (max-width: 630px) {
 			.site-branding {
 			border: none;
@@ -960,8 +955,6 @@ a:active {
 
 	}
 
-
-
 .logo {
 
 	max-width: 150px;
@@ -972,21 +965,13 @@ a:active {
 
 	@media screen and (max-width: 600px) {
 			.logo {
-				max-width: 80px;
-				max-height: 80px;
-				float: none;
-				margin: 0 auto;
-			}
-		}
-	@media screen and (max-height: 640px) {
-			.logo {
 				max-width: 100px;
 				max-height: 100px;
 				float: none;
 				margin: 0 auto;
 			}
 		}
-
+	
 
 .site-title { 
 	margin: .7em  1em 0;
@@ -1061,44 +1046,38 @@ a:active {
     -webkit-transition: none;
     transition: none;
      -moz-user-select: none;
+
     background-color: #de4f4f;
     background-image: none;
+
     border: 1px solid transparent;
 	border-radius: 0;
-	line-height: 1.62857;
+
 	min-width: 180px;
 	width: 60%;
 	max-width: 90%;
 	height: 80px;
-	padding: 10px;
+
 	color: white;
-	font-size: 3.5em;
-	font-size: 3vw;
+	font-size: 2.5em;
 	font-weight: 300;
 	text-align: center;
     text-transform: uppercase;
     vertical-align: middle;
     white-space: nowrap;
-
-
-
 }
 
-@media screen and (max-height: 558px) {
-			#cta-btn {
-				font-size: 2.5em;
-			}
-		}
 
 @media screen and (max-width: 1033px) {
 			#cta-btn {
-				font-size: 3em;
+				font-size: 2.5em;
 			}
 		}
 
 @media screen and (max-width: 558px) {
 			#cta-btn {
-				font-size: 2.5em;
+				height: 60px;
+				font-size: 2.2em;
 			}
 		}
 
@@ -1116,25 +1095,35 @@ a:active {
     box-shadow: none;
     -webkit-transition: none;
     transition: none;
+
     background-color: #317873;
     background-image: none;
+
     border: 1px solid transparent;
 	border-radius: 0;
-	margin-bottom: 20px;
-	max-width: 90%;
-	color: white;
-	line-height: 1.62857;
+
+	margin-bottom: 1em;
+
 	min-width: 160px;
-	width: 60%;
-	height: 60px;
+	width: 55%;
+	max-width: 90%;
+	height: 65px;
+
 	color: white;
-	font-size: 2.5em;
+	font-size: 1.9em;
 	font-weight: 300;
 	text-align: center;
     text-transform: uppercase;
     vertical-align: middle;
     white-space: nowrap;
 }
+
+@media screen and (max-width: 558px) {
+			#sec-btn {
+				height: 60px;
+				font-size: 2em;
+			}
+		}
 
 #sec-btn:hover {
 	-webkit-box-shadow: none;
@@ -1148,7 +1137,7 @@ a:active {
 	width: 100%;
 	color: white;
 	font-size: 2em;
-	margin=bottom: 5px;
+	margin-top: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -1192,22 +1181,12 @@ a:active {
 --------------------------------------------------------------*/
 
 .landing_section {
+	position: relative;
 	display: block;
-	height: 100vh;
+	height: 100%;
+	min-height: 100vh;
 	width: 100%;
-	position: relative;
 	margin-bottom: 0;
-}
-
-.landing-content {
-	display: block;
-	position: relative;
-	height: 90%;
-	width: 90%;
-	margin: auto;
-	top: 0; bottom: 0; left: 0; right: 0;
-	font-size: 1.3em;
-
 }
 
 .menu-buffer {
@@ -1218,39 +1197,59 @@ a:active {
 	clear:both;
 }
 
+.landing-content {
+	display: block;
+	position: relative;
+	min-height: inherit;
+	width: 90%;
+	margin: auto;
+	top: 0; bottom: 0; left: 0; right: 0;
+	font-size: 1.3em;
+}
+
+.content-row {
+	padding-bottom: 120px; /* height of button-row */
+}
+
 .button-row{
 	position: absolute;
+	margin-bottom: 20px;
+	height: 100px;
 	bottom: 0;
+	right: 0;
 	width: 100%;
 }
 
 .landing-section-btn {
 
-	margin-bottom: 20px;
+	
 	-webkit-box-shadow: none;
     box-shadow: none;
     -webkit-transition: none;
     transition: none;
+
     background-color: #317873;
     background-image: none;
+
     border: 1px solid transparent;
     border-radius: 0;
-	color: white;
-	line-height: 1.62857;
+
+
 	min-width: 200px;
 	width: 50%;
 	height: 80px;
+
 	color: white;
 	font-size: 2.5em;
 	font-weight: 300;
 	text-align: center;
-    text-transform: uppercase;
     vertical-align: middle;
     white-space: nowrap;
 }
 
 @media screen and (max-width: 558px) {
 			.landing-section-btn {
+				font-size: 1.9em;
 				width: 80%;
 			}
 		}

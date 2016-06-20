@@ -97,12 +97,16 @@
 
 
 			<div class="buttons">
-				<div class="row-fluid">
-					<div id="sec-btn-label"><?php echo get_theme_mod( 'sec_button_label' ); ?></div>
-					<a class="btn" id="sec-btn" href="<?php echo site_url().get_theme_mod( 'sec_button_target' ); ?>"> <?php echo get_theme_mod( 'sec_button_textbox', 'No text saved yet' ); ?> </a>
-				</div>
+				
 				<div class="row-fluid">
 					<button class="btn" id="cta-btn"> <?php echo get_theme_mod( 'button_textbox', 'No text saved yet' ); ?> </button>
+				</div>
+
+				<div class="row-fluid">
+					<div id="sec-btn-label"><?php echo get_theme_mod( 'sec_button_label' ); ?></div>
+					<a class="btn" href="<?php echo site_url().get_theme_mod( 'sec_button_target' ); ?>"> 
+						<button class="btn" id="sec-btn"><?php echo get_theme_mod( 'sec_button_textbox', 'No text saved yet' ); ?> </button>
+					</a>
 				</div>
 					
 			</div>
