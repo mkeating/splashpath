@@ -64,17 +64,18 @@ get_header(); ?>
 							//update hash on scroll
 
 							$('section').each(function(){
+								
 								if( 
 									$(this).offset().top < window.pageYOffset + 10  
 									&& $(this).offset().top + $(this).height() > window.pageYOffset + 10 ){
 										//this supports older browsers but causes an annoying jump on scroll up
 										//window.location.hash = $(this).attr('id');
-										history.pushState(null, null, '#' + $(this).attr('id'));
+										window.history.replaceState(null, '#' + $(this).attr('id'), '#' + $(this).attr('id'));
 								}
 							});
 							//remove hash when on the header
 							if($(window).scrollTop() == 0){
-								history.replaceState({}, document.title, ".");
+								window.history.replaceState({}, document.title, ".");
 							}						
 						});
 					});
@@ -84,10 +85,7 @@ get_header(); ?>
 
 			$count = 0;
 			while( $landing_sections->have_posts() ){
-
-
-				$landing_sections->the_post();
-				
+					$landing_sections->the_post();
 				?>
 				<div class="row-fluid">
 				
@@ -100,7 +98,6 @@ get_header(); ?>
 						get_template_part( 'template-parts/content-landing', get_post_format() );
 					?>
 				</div>
-
 
 				<?php
 				$count++;
@@ -131,7 +128,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	
 	</div><!-- #primary -->
-
+<div class="push"></div>
 <?php
 #get_sidebar();
 get_footer(); 
