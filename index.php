@@ -73,9 +73,10 @@ get_header(); ?>
 										window.history.replaceState(null, '#' + $(this).attr('id'), '#' + $(this).attr('id'));
 								}
 							});
-							//remove hash when on the header
+							//remove hash and hide logo when at the top of the page
 							if($(window).scrollTop() == 0){
 								window.history.replaceState({}, document.title, ".");
+								$(".navbar-brand").css('display', 'none');
 							}						
 						});
 					});

@@ -50,6 +50,8 @@
 					$instagram =  get_theme_mod( 'instagram_textbox');
 					$linkedin =  get_theme_mod( 'linkedin_textbox');
 
+					debug_to_console('facebook: ' . $facebook);
+
 					if( $facebook != NULL ){
 						?>
 						<a href="<?php echo $facebook; ?>" ><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
