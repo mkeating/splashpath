@@ -757,13 +757,13 @@ a:active {
 
 .navbar-nav.pull-right > li > a:hover {
 	background-color: #36454F !important;
-	border-bottom: 2px solid #de4f4f;
+	border-bottom: 2px solid #FF5555;
 	color: #de4f4f;
 }
 
 .menu-item.active > a {
-	border-bottom: 2px solid #de4f4f;
-	color: #de4f4f;
+	border-bottom: 2px solid #FF5555;
+	color: #FF5555;
 }
 
 
@@ -1092,11 +1092,13 @@ a:active {
 }
 
 #cta-btn {
-	-webkit-box-shadow: none;
-    box-shadow: none;
+	/*-webkit-box-shadow: none;
+    box-shadow: none;*/
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     -webkit-transition: none;
     transition: none;
      -moz-user-select: none;
+   
 
     background-color: #FF5555;
     background-image: none;
@@ -1133,8 +1135,10 @@ a:active {
 		}
 
 #cta-btn:hover {
-	-webkit-box-shadow: none;
-    box-shadow: none;
+	/*-webkit-box-shadow: none;
+    box-shadow: none;*/
+
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     -webkit-transition: none;
     transition: none;
     background-color: #bd2323;
@@ -1142,8 +1146,9 @@ a:active {
 
 #sec-btn {
 
-	-webkit-box-shadow: none;
-    box-shadow: none;
+	/*-webkit-box-shadow: none;
+    box-shadow: none;*/
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     -webkit-transition: none;
     transition: none;
 
@@ -1177,8 +1182,9 @@ a:active {
 		}
 
 #sec-btn:hover {
-	-webkit-box-shadow: none;
-    box-shadow: none;
+	/*-webkit-box-shadow: none;
+    box-shadow: none;*/
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     -webkit-transition: none;
     transition: none;
     background-color: #1b423f;
@@ -1243,9 +1249,10 @@ a:active {
 .landing_section {
 	position: relative;
 	display: block;
-	height: 100%;
 	overflow: auto;
 	min-height: 100vh;
+	height: 100%;
+	height: auto;
 	width: 100%;
 	margin-bottom: 0;
 }
@@ -1265,14 +1272,17 @@ a:active {
 	width: 90%;
 	margin: auto;
 	top: 0; bottom: 0; left: 0; right: 0;
-	font-size: 1.3em;
+	font-size: 1.3rem;
+	line-height: 2rem;
 }
 
 .content-row {
 	
-	height: auto;
+	width: 100%;
+	min-height: 80%;
 	font-size: 2.3rem;
-	padding-bottom: 5rem;
+	/*padding-bottom: 5rem;*/
+	float: left;
 	
 }
 
@@ -1290,21 +1300,21 @@ a:active {
 }
 
 .button-row{
-	position: absolute;
-	margin-bottom: 20px;
+
+	margin-top: 15%;
+	margin-bottom: 15%;
 	height: 100px;
-	bottom: 0;
-	right: 0;
 	width: 100%;
+	float: left;
 }
 
 .landing-section-btn {
 
-	-webkit-box-shadow: none;
+	/*-webkit-box-shadow: none;
     box-shadow: none;
     -webkit-transition: none;
-    transition: none;
-
+    transition: none;*/
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     background-color: #44CD44;
     background-image: none;
 
@@ -1313,7 +1323,7 @@ a:active {
 
 
 	min-width: 200px;
-	width: 50%;
+	width: 30%;
 	height: 80px;
 
 	color: white;
@@ -1332,8 +1342,9 @@ a:active {
 		}
 
 .landing-section-btn:hover {
-	-webkit-box-shadow: none;
-    box-shadow: none;
+	/*-webkit-box-shadow: none;
+    box-shadow: none;*/
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     -webkit-transition: none;
     transition: none;
     background-color: #1b423f;
@@ -1341,20 +1352,6 @@ a:active {
     border: 1px solid transparent;
 }
 
-/*--------------------------------------------------------------
-## Registration
---------------------------------------------------------------*/
-
-.page-id-57 {
-	background-color: gray;
-	color: white;
-}
-
-.registration-box {
-	border: 1px solid white;
-	float: left;
-	background: rgba(0, 0, 0, 0.3);
-}
 
 /*--------------------------------------------------------------
 ## Global
@@ -1376,17 +1373,22 @@ a:active {
  	transform: translate(-50%, -50%);
 	height: 50%;
 	width: 50%;
+	
 }
 
 .site,
 .site-content,
 .content-area,
-.container-fluid, 
 .page {
 	min-height: 100%;
     height: auto !important;
     height: 100%;
     position: relative;
+}
+
+.main-container {
+	margin: 0;
+	padding: 0;
 }
 
 article.page {
@@ -1602,10 +1604,12 @@ object {
 
 #am-i-eligible *{
 	color: white !important;
+	
 }
 
 #join-the-study *{
 	color: white !important;
+
 }
 
 .testimonial {
@@ -1618,3 +1622,117 @@ object {
 	max-height: 100px;
 	padding-right, padding-left: -51px;
 }
+
+#reg-submit-btn {
+	/*-webkit-box-shadow: none;
+    box-shadow: none;*/
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    
+
+    -webkit-transition: none;
+    transition: none;
+     -moz-user-select: none;
+
+    background-color: #FF5555;
+    background-image: none;
+
+    border: 1px solid transparent;
+	border-radius: 0;
+
+	min-width: 180px;
+	width: 50%;
+	max-width: 500px;
+	height: 80px;
+	margin: 0 auto;
+
+	color: white;
+	font-size: 1.5em;
+	font-weight: 300;
+	text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+#reg-submit-btn:hover {
+	/*-webkit-box-shadow: none;
+    box-shadow: none;*/
+
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    -webkit-transition: none;
+    transition: none;
+    background-color: #bd2323;
+}
+
+/*--------------------------------------------------------------
+## Registration
+--------------------------------------------------------------*/
+
+.page-id-57 {
+	background-color: gray;
+	color: white;
+}
+
+.registration-box {
+	border: 1px solid white;
+	min-width: 300px;
+	max-width: 500px;
+	height: 50%;
+	width: 50%;
+	margin: 0 auto;
+	padding: 20px;
+	margin-top: 100px;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+	/* TODO: on big enough screens, use center positioning? then on smaller screens use decreasing margin-tops;   */
+
+	@media screen and (max-width: 320px) {
+		.registration-box {
+			margin: 0;
+			padding: 5px;
+		}	
+	}
+
+#reg-submit-btn {
+	/*-webkit-box-shadow: none;
+    box-shadow: none;*/
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    
+
+    -webkit-transition: none;
+    transition: none;
+     -moz-user-select: none;
+
+    background-color: #FF5555;
+    background-image: none;
+
+    border: 1px solid transparent;
+	border-radius: 0;
+
+	min-width: 180px;
+	width: 50%;
+	max-width: 500px;
+	height: 80px;
+	margin: 0 auto;
+
+	color: white;
+	font-size: 1.5em;
+	font-weight: 300;
+	text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+#reg-submit-btn:hover {
+	/*-webkit-box-shadow: none;
+    box-shadow: none;*/
+
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    -webkit-transition: none;
+    transition: none;
+    background-color: #bd2323;
+}
+
+	

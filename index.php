@@ -16,7 +16,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+		<div class="container-fluid main-container">
 		<?php
 		if ( have_posts() ) :
 
@@ -76,6 +76,7 @@ get_header(); ?>
 							//remove hash and hide logo when at the top of the page
 							if($(window).scrollTop() == 0){
 								window.history.replaceState({}, document.title, ".");
+								
 								$(".navbar-brand").css('display', 'none');
 							}						
 						});
@@ -125,7 +126,7 @@ get_header(); ?>
 			//get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-
+		</div> <!-- .container-fluid -->
 		</main><!-- #main -->
 	
 	</div><!-- #primary -->
