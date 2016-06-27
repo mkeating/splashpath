@@ -22,20 +22,16 @@
 				
 
 				
-						<div class="row-fluid content-row">
-							<h1> <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?> </h1>
-								<?php
-									the_content();	
-								?>
-								<div class="button-buffer"></div>
-								<div class="clearfix"></div>
-						</div>
+		<div class="row-fluid content-row">
+			<h1> <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?> </h1>
+				<?php
+					the_content();	
+				?>
 
-						<div class="row-fluid button-row text-center"></div>
-			
+		</div>
+		<div class="button-buffer"></div>
+		
 				
-				
-	
 			<script type="text/javascript">
 
 				jQuery(function($) {
@@ -58,9 +54,12 @@
 					var next_target = <?php echo json_encode(get_post_meta($post->ID, "_nxt_btn_target", true));?> ;
 					var next_text = <?php echo json_encode(get_post_meta($post->ID, "_nxt_btn_text", true));?> ;
 
-					//if next_target, add the next button
 
+
+					//if next_target, add the next button
 					if(next_target != '') {
+
+						$("#<?php echo $post->post_name?> > .landing-content").append("<div class='row-fluid button-row text-center'></div>");
 
 						$( "#<?php echo $post->post_name?> > .landing-content > .button-row" )
 							.append( "<button id='<?php echo $post->post_name.'-btn';?>' class='btn btn-default landing-section-btn' >" + next_text + "</button>" );
