@@ -800,6 +800,7 @@ a:active {
 @media only screen and (max-width : 767px) {
 	.navbar-collapse {
 		width: 100%;
+		max-height: none !important;
 	}
 
 	.navbar-collapse > ul{
@@ -947,7 +948,7 @@ a:active {
 
 .headerBg img {
 
-	position: fixed;
+	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -970,7 +971,6 @@ a:active {
 	width: 50%;
 	max-width: 500px;
 	text-align: center;
-	/*border: 1px solid white;*/
 	float: left;
 	background: rgba(0, 0, 0, 0.4);
 }
@@ -1202,12 +1202,12 @@ a:active {
 --------------------------------------------------------------*/
 
 .push {
-	height: 100px;
+	height: 200px;
 }
 
 .site-footer {
-  margin-top: -100px; /* negative value of footer height */
-  min-height: 100px;
+  margin-top: -200px; /* negative value of footer height */
+  min-height: 200px;
   width: 100%;
   background-color: #36454F;
   color: white;
@@ -1216,8 +1216,8 @@ a:active {
 }
 
 .site-footer-sticky {
-   margin-top: -100px; /* negative value of footer height */
-   height: 100px;
+   margin-top: -200px; /* negative value of footer height */
+   min-height: 200px;
    position:absolute;
    bottom:0;
    clear:both;
@@ -1269,7 +1269,7 @@ a:active {
 	display: block;
 	position: relative;
 	min-height: inherit;
-	width: 90%;
+	width: 100%;
 	margin: auto;
 	top: 0; bottom: 0; left: 0; right: 0;
 	font-size: 1.3rem;
@@ -1281,6 +1281,7 @@ a:active {
 	width: 100%;
 	min-height: 80%;
 	font-size: 2.3rem;
+
 	/*padding-bottom: 5rem;*/
 	float: left;
 	
@@ -1301,7 +1302,7 @@ a:active {
 
 .button-row{
 
-	margin-top: 15%;
+	margin-top: 5%;
 	margin-bottom: 15%;
 	height: 100px;
 	width: 100%;
@@ -1399,36 +1400,36 @@ article.page {
 	margin: 0;
 	
 }
-
+/*
 @media screen and (min-width: 30em) {
 	.site-main {
-		/*margin: 1.8em;*/
+		/*margin: 1.8em;
 	}
 }
 
-
+*/
 @media screen and (min-width: 40em) {
 	.site-main {
 		font-size: 1em;
 	}
 }
-
+/*
 @media screen and (min-width: 57em) {
 	.site-main {
-		/*max-width: 45em;*/
-		/*margin: 1.8em auto;*/
+		/*max-width: 45em;
+		/*margin: 1.8em auto;
 	}
 
-
+*/
 @media screen and (min-width: 57em) {
-	/*max-width: 45em;
-	margin: 1.8 em auto;*/
+	/*max-width: 45em;*/
+	margin: 1.8 em auto;
 }
 
 
 @media screen and (max-width: 320px) {
-	/*max-width: 45em;
-	margin: 1.8 em auto;*/
+	/*max-width: 45em;*/
+	margin: 1.8 em auto;
 
 }
 
@@ -1603,7 +1604,7 @@ object {
 */
 
 #am-i-eligible *{
-	color: white !important;
+	color: white;
 	
 }
 
@@ -1612,10 +1613,7 @@ object {
 
 }
 
-.testimonial {
-	text-align: right;
-	color: #9053B5;
-}
+
 
 .banner {
 	width: 100%;
@@ -1674,7 +1672,7 @@ object {
 }
 
 .registration-box {
-	border: 1px solid white;
+	
 	min-width: 300px;
 	max-width: 500px;
 	height: 50%;
@@ -1693,6 +1691,20 @@ object {
 			padding: 5px;
 		}	
 	}
+
+.registration-box > form  {
+	margin: auto;
+	max-width: 90%;
+
+}
+.registration-box > form > fieldset {
+	border: none;
+}
+
+.registration-box > form > fieldset > input {
+	margin-left, margin-right: auto;
+
+}
 
 #reg-submit-btn {
 	/*-webkit-box-shadow: none;
@@ -1745,7 +1757,96 @@ article > .entry-content {
 	font-size: 1.5rem;
 }
 
-.our-story, .faq {
+.center-content {
 	margin: 0 auto;
 	max-width: 500px;
+}
+
+.banner {
+	display: block;
+	min-height: 260px;
+	width: auto;
+	height: auto;
+	margin-left: -15px;
+	margin-top: 50px;
+}
+
+.involved-text {
+	/*padding-left: 20%;*/ /* only for fullscreen*/
+	margin-top: 3rem;
+}
+
+@media screen and (min-width: 600px){
+		.involved-text {
+		padding-left: 10%;
+	}
+}
+
+.eligible-text {
+	padding: 15px;
+	
+}
+
+@media screen and (min-width: 600px){
+		.eligible-text {
+		padding: 15px;
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+}
+
+.team {
+	text-align: center;
+}
+
+.grid__row {
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row 
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: baseline;
+   -webkit-justify-content: center;
+   justify-content: center;
+  
+}
+
+@media screen and (max-width: 700px) {
+	.grid__row {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.grid__cell {
+  flex: 1;
+  flex=shrink: 1;
+
+}
+
+
+.avatar {
+	text-align: center;
+
+}
+.avatar img {
+	margin-bottom: 10px;
+
+}
+
+.testimonial-1 {
+	text-align: right;
+	color: #9053B5;
+}
+
+.testimonial-2 {
+	text-align: left;
+	color: #FFB6C1 !important;
+}
+
+.container-fluid {
+	min-height: 100%;
 }

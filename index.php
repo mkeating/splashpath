@@ -134,4 +134,5 @@ get_header(); ?>
 <?php
 #get_sidebar();
 get_footer(); 
+#get_template_part( 'template-parts/sticky-footer', get_post_format() );
 

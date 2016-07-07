@@ -15,9 +15,9 @@
 			//get custom header image and add it to site-header
 				$bg_image = get_header_image();
 				
-				$bg_large = get_theme_mod( 'bg_large' );
-				$bg_med = get_theme_mod( 'bg_med' );
-				$bg_small = get_theme_mod( 'bg_small' );		
+				$bg_large 	= get_theme_mod( 'bg_large' );
+				$bg_med 	= get_theme_mod( 'bg_med' );
+				$bg_small 	= get_theme_mod( 'bg_small' );		
 		?>
 
 		<div class="headerBg">
