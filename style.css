@@ -1850,3 +1850,8 @@ article > .entry-content {
 .container-fluid {
 	min-height: 100%;
 }
+
+a[title="Join!"] {
+    color: #44CD44 !important;
+}
+

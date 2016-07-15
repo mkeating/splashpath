@@ -41,6 +41,12 @@ get_template_part( 'template-parts/reg-nav', get_post_format() );?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+	<script type="text/javascript">
+
+		 jQuery(".navbar-brand").css('display', 'inline');
+
+	</script>
+
 <?php
 //get_sidebar();
 get_template_part( 'template-parts/sticky-footer', get_post_format() );

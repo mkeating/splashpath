@@ -18,7 +18,7 @@
 		      <span class="icon-bar"></span> 
 		      <span class="icon-bar"></span> 
 		    </button> 
-		    <a class="navbar-brand" href="<?php bloginfo('url')?>"><?php echo get_theme_mod( 'site_logo' ); ?></a>
+		    <a class="navbar-brand" href="<?php bloginfo('url')?>"><img src="<?php echo get_theme_mod( 'site_logo' ); ?>" class="brand-logo"/> </a>
 		  </div> 
 		  <!-- Collect the nav links, forms, and other content for toggling --> 
 		  <div class="collapse navbar-collapse navbar-ex1-collapse"> 
