@@ -1354,6 +1354,7 @@ a:active {
 }
 
 
+
 /*--------------------------------------------------------------
 ## Global
 --------------------------------------------------------------*/
@@ -1823,7 +1824,7 @@ article > .entry-content {
 
 .grid__cell {
   flex: 1;
-  flex=shrink: 1;
+  flex-shrink: 1;
 
 }
 
@@ -1838,11 +1839,20 @@ article > .entry-content {
 }
 
 .testimonial-1 {
+	font-size: .8em;
 	text-align: right;
 	color: #9053B5;
 }
 
 .testimonial-2 {
+	font-size: .8em;
+	text-align: left;
+	color: #FFB6C1 !important;
+}
+
+
+.testimonial-2 > p{
+	font-size: .8em;
 	text-align: left;
 	color: #FFB6C1 !important;
 }
@@ -1855,3 +1865,7 @@ a[title="Join!"] {
     color: #44CD44 !important;
 }
 
+
+article {
+	padding-top: 50px;
+}
