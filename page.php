@@ -49,4 +49,4 @@ get_template_part( 'template-parts/reg-nav', get_post_format() );?>
 
 <?php
 //get_sidebar();
-get_template_part( 'template-parts/sticky-footer', get_post_format() );
+//get_template_part( 'template-parts/sticky-footer', get_post_format() );

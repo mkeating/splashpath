@@ -130,9 +130,9 @@ get_header(); ?>
 		</main><!-- #main -->
 	
 	</div><!-- #primary -->
-<div class="push"></div>
+<!--<div class="push"></div>-->
 <?php
 #get_sidebar();
 get_footer(); 
-#get_template_part( 'template-parts/sticky-footer', get_post_format() );
+//get_template_part( 'template-parts/sticky-footer', get_post_format() );
 

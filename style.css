@@ -740,7 +740,7 @@ a:active {
 .navbar-custom {
 	width: 100%;
 	border-radius: 0;
-	background-color: #36454F;
+	background-color: #232D32;
 	border: none;
 	margin-bottom: 0;
 }
@@ -1205,25 +1205,33 @@ a:active {
 	height: 200px;
 }
 
+
 .site-footer {
-  margin-top: -200px; /* negative value of footer height */
-  min-height: 200px;
+  /*margin-top: -200px; /* negative value of footer height */
+ /* min-height: 200px;
   width: 100%;
-  background-color: #36454F;
-  color: white;
   clear:both;
+  */
   padding-top:20px;
+  padding-bottom: 20px;
+  background-color: #232D32;
+  color: white;
 }
 
 .site-footer-sticky {
-   margin-top: -200px; /* negative value of footer height */
-   min-height: 200px;
+   /*margin-top: -200px; /* negative value of footer height */
+   /*min-height: 200px;
    position:absolute;
    bottom:0;
    clear:both;
+   padding-top:20px;*/ 
    padding-top:20px;
-  
+   padding-bottom: 20px;
+   background-color: #232D32;
+  color: white;
+ 
 }
+
 
 
 /*--------------------------------------------------------------
@@ -1382,6 +1390,9 @@ a:active {
 .site-content,
 .content-area,
 .page {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
 	min-height: 100%;
     height: auto !important;
     height: 100%;
@@ -1868,4 +1879,16 @@ a[title="Join!"] {
 
 article {
 	padding-top: 50px;
+}
+
+.eligibility-list {
+
+	margin: 0 0 1.5em 0 !important;
+}
+
+.entry-header {
+
+	min-height: 120px;
+	vertical-align: middle;
+
 }
