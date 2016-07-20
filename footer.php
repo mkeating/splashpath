@@ -15,7 +15,7 @@
 
 		<footer id="colophon" class="site-footer site-footer-sticky" role="contentinfo">
 		<div class="row-fluid">
-				<div class=" col-lg-4 col-med-4 col-sm-4 col-xs-12 text-center">
+				<div class=" col-lg-4 col-med-4 col-sm-4 col-xs-12 text-center footer-section">
 					<a href="<?php bloginfo('url')?>"><img src="<?php echo get_theme_mod( 'site_logo' ); ?>" class="brand-logo"/> </a>
 						
 					<div class="site-social"> 
@@ -60,7 +60,7 @@
 
 				</div><!-- .site-info -->
 
-				<div class="col-lg-4 col-med-4 col-sm-4 col-xs-12 ">
+				<div class="col-lg-4 col-med-4 col-sm-4 col-xs-12  footer-section">
 					<div style="margin: 0 auto; width: 80%">
 						<img src="http://localhost/wordpress/wp-content/uploads/2016/07/hthcsph_white.gif" /> <br /><br />
 						<img src="http://localhost/wordpress/wp-content/uploads/2016/07/hms_white.gif" /><br /><br />
@@ -70,8 +70,9 @@
 						
 				</div>
 
-				<div class="site-info col-lg-4 col-med-4 col-sm-4 col-xs-12 text-center">
+				<div class="col-lg-4 col-med-4 col-sm-4 col-xs-12 text-center footer-section footer-contact ">
 
+						<span>
 						nhs3@channing.harvard.edu<br />
 						Nurses’ Health Study<br />
 						Channing Laboratory<br />
@@ -81,7 +82,8 @@
 						Fax: 617-525-2008<br />
 
 							
-					<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'nhs3_s' ), 'nhs3_s', '<a href="http://underscores.me/" rel="designer">Michael Keating</a>' ); ?>
+						<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'nhs3_s' ), 'nhs3_s', '<a href="http://underscores.me/" rel="designer">Michael Keating</a>' ); ?> 
+						</span>
 				</div>
 
 			</div>

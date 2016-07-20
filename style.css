@@ -1207,11 +1207,7 @@ a:active {
 
 
 .site-footer {
-  /*margin-top: -200px; /* negative value of footer height */
- /* min-height: 200px;
-  width: 100%;
-  clear:both;
-  */
+ 
   padding-top:20px;
   padding-bottom: 20px;
   background-color: #232D32;
@@ -1219,19 +1215,21 @@ a:active {
 }
 
 .site-footer-sticky {
-   /*margin-top: -200px; /* negative value of footer height */
-   /*min-height: 200px;
-   position:absolute;
-   bottom:0;
-   clear:both;
-   padding-top:20px;*/ 
-   padding-top:20px;
+     padding-top:20px;
    padding-bottom: 20px;
    background-color: #232D32;
   color: white;
  
 }
 
+.footer-section {
+	padding-bottom: 20px;
+}
+
+.footer-contact > span {
+	font-size: 1.3em;
+	padding-top: 20px;
+}
 
 
 /*--------------------------------------------------------------
