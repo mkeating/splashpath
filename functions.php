@@ -246,7 +246,7 @@ function landing_nxt_btn_text() {
 }
 
 //save metabox data
-function save_landing_meta($post_id, $post) {
+function save_landing_meta($post_id = false, $post = false) {
 
 	//verify source
 	if ( !wp_verify_nonce( $_POST['landingmeta_noncename'], plugin_basename(__FILE__) )) {
@@ -541,7 +541,7 @@ function header_text_customizer( $wp_customize ) {
 }
 add_action( 'customize_register', 'header_text_customizer' );
 
-
+add_filter('show_admin_bar', '__return_false');
 
 
 
