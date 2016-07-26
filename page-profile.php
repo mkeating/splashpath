@@ -24,6 +24,18 @@ get_template_part( 'template-parts/reg-nav', get_post_format() );?>
      * if ( !($current_user instanceof WP_User) )
      *     return;
      */
+
+    global $wpdb;
+
+
+
+    $username = $current_user->user_login;
+    $NHSID = $current_user->NHSID;
+
+    //$email = $wpdb->get_var("SELECT user_email FROM wp_users WHERE user_login = 'danielpataki' ");
+
+    //$current_survey = $wpdb->get_results( "SELECT * FROM wp_users");
+
     echo 'Username: ' . $current_user->user_login . '<br />';
     echo 'User email: ' . $current_user->user_email . '<br />';
     echo 'User first name: ' . $current_user->user_firstname . '<br />';
@@ -33,6 +45,8 @@ get_template_part( 'template-parts/reg-nav', get_post_format() );?>
     echo 'NHS3ID: ' . $current_user->NHSID . '<br />';
 ?>
 
+
+<h1>Hi <?php echo $username ?>!</h1>
 	
 </section><!-- #post-## -->
 <?php

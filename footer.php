@@ -81,7 +81,7 @@
 						Telephone: 617-525-2279<br />
 						Fax: 617-525-2008<br />
 
-							
+						&copy;2016<br/>
 						<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'nhs3_s' ), 'nhs3_s', '<a href="http://underscores.me/" rel="designer">Michael Keating</a>' ); ?> 
 						</span>
 				</div>

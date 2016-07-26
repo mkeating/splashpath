@@ -24,8 +24,25 @@ $args = array(
     'id_password' => 'pass',
    ) 
 ;?>
-	
+
+<div class="registration-box">
+
+ <!--<form>
+  <fieldset class="form-group">
+    <label for="inputEmail">Email:</label>
+    <input type="email" class="form-control" id="inputEmail" placeholder="Enter email">
+  
+    <label for="inputPassword">Password</label>
+    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+  </fieldset>
+ <div class="row-fluid text-center">
+      <button type="submit" class="btn" id="reg-submit-btn"> SUBMIT </button>
+</div>
+</form>-->
 <?php wp_login_form( $args ); ?>
+</div>
+
+
 
 	
 </section><!-- #post-## -->

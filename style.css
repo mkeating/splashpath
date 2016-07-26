@@ -801,6 +801,7 @@ a:active {
 	.navbar-collapse {
 		width: 100%;
 		max-height: none !important;
+		overflow: hidden;
 	}
 
 	.navbar-collapse > ul{
@@ -1481,7 +1482,13 @@ article.page {
 }
 
 .entry-title {
-	margin: 0 auto !important;
+	margin: 0 auto 50px !important;
+}
+
+@media screen and (max-width: 320px) {
+	.entry-title {
+		margin: 0 auto 15px !important;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1695,10 +1702,12 @@ object {
 
 	/* TODO: on big enough screens, use center positioning? then on smaller screens use decreasing margin-tops;   */
 
-	@media screen and (max-width: 320px) {
+	@media screen and (max-width: 500px) {
 		.registration-box {
 			margin: 0;
 			padding: 5px;
+			width: 100%;
+			background: none;
 		}	
 	}
 
@@ -1747,6 +1756,12 @@ object {
     white-space: nowrap;
 }
 
+@media screen and (max-width: 320px){
+	#reg-submit-btn {
+		height: 50px;
+	}
+}
+
 #reg-submit-btn:hover {
 	/*-webkit-box-shadow: none;
     box-shadow: none;*/
@@ -1783,12 +1798,26 @@ article > .entry-content {
 
 .involved-text {
 	/*padding-left: 20%;*/ /* only for fullscreen*/
-	margin-top: 3rem;
+	margin: 50px;
+	text-align: center;
+}
+
+@media screen and (max-width: 320px){
+	.involved-text{
+		margin: 30px;
+	}
+}
+
+.involved-image {
+	max-width: 100px;
+	max-height: 100px;
+	
 }
 
 @media screen and (min-width: 600px){
 		.involved-text {
-		padding-left: 10%;
+		margin-left, margin-right:30px; 
+		/*padding-left: 10%;*/
 	}
 }
 
@@ -1848,13 +1877,13 @@ article > .entry-content {
 }
 
 .testimonial-1 {
-	font-size: .8em;
+	font-size: 2.1em;
 	text-align: right;
 	color: #9053B5;
 }
 
 .testimonial-2 {
-	font-size: .8em;
+	font-size: 2.1em;
 	text-align: left;
 	color: #FFB6C1 !important;
 }
@@ -1886,7 +1915,10 @@ article {
 
 .entry-header {
 
-	min-height: 120px;
 	vertical-align: middle;
 
+}
+
+.join-text {
+	font-size: 1.1em;
 }
