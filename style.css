@@ -1922,3 +1922,98 @@ article {
 .join-text {
 	font-size: 1.1em;
 }
+
+.survey-link * {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.current-survey-panel{
+
+	background: url(http://localhost/wordpress/wp-content/uploads/2016/07/diet-wide.jpg) no-repeat center center;
+	background-size: cover;
+	width: 60%;
+	min-height: 200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+@media screen and (max-width: 800px) {
+
+	.current-survey-panel {
+		background: url(http://localhost/wordpress/wp-content/uploads/2016/07/diet-portrait.jpg) no-repeat center center;
+		background-size: cover;
+		min-height: 400px;
+		width: 90%;
+	}
+}
+
+.current-survey-content {
+	text-decoration: none;
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(255,255,255,.7);
+	width: 100%;
+	padding: 10px;
+	color: #373D3F;
+	font-weight: 600;
+}
+
+
+
+.current-survey-title {
+	font-size: 3em;
+	margin-bottom: 5px;
+}
+
+.current-survey-description, .current-survey-duration {
+	font-size: 1.5em;
+}
+
+#update-btn {
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    -webkit-transition: none;
+    transition: none;
+
+    background-color: #44CD44;
+    background-image: none;
+
+    border: 1px solid transparent;
+	border-radius: 0;
+
+	margin-bottom: 1em;
+
+
+	width: 200px;
+
+	height: 65px;
+
+	color: white;
+	font-size: 1.9em;
+	font-weight: 300;
+	text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+section#profile {
+	min-height: 100vh;
+	padding-bottom: 50px;
+}
+
+.update-box {
+	margin-top: 0;
+}
+
+
+
+.completed-survey {
+	background-color: #649F86;
+	color: white;
+	font-size: 1.2em;
+	margin: 10px auto;
+	padding: 10px;
+	max-width: 500px;
+
+}
