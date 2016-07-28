@@ -60,7 +60,7 @@
 
 				</div><!-- .site-info -->
 
-				<div class="col-lg-4 col-med-4 col-sm-4 col-xs-12  footer-section">
+				<div class="col-lg-4 col-med-4 col-sm-4 col-xs-12 footer-section text-center">
 					<div style="margin: 0 auto; width: 80%">
 						<img src="http://localhost/wordpress/wp-content/uploads/2016/07/hthcsph_white.gif" /> <br /><br />
 						<img src="http://localhost/wordpress/wp-content/uploads/2016/07/hms_white.gif" /><br /><br />

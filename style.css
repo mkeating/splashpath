@@ -1933,9 +1933,14 @@ article {
 	background: url(http://localhost/wordpress/wp-content/uploads/2016/07/diet-wide.jpg) no-repeat center center;
 	background-size: cover;
 	width: 60%;
-	min-height: 200px;
+	min-height: 250px;
 	margin: 0 auto;
 	position: relative;
+	border: 2px solid transparent;
+}
+
+.current-survey-panel:hover{
+	border: 2px solid #44CD44;
 }
 
 @media screen and (max-width: 800px) {
@@ -1983,9 +1988,7 @@ article {
 
 	margin-bottom: 1em;
 
-
 	width: 200px;
-
 	height: 65px;
 
 	color: white;
@@ -2016,4 +2019,9 @@ section#profile {
 	padding: 10px;
 	max-width: 500px;
 
+}
+
+#loginform > p > input{
+	display: block;
+	border: 1px solid red;
 }

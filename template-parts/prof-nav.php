@@ -22,16 +22,9 @@
 		  </div> 
 		  <!-- Collect the nav links, forms, and other content for toggling --> 
 		  <div class="collapse navbar-collapse navbar-ex1-collapse"> 
-		    <?php /* Primary navigation */
-				wp_nav_menu( array(
-				  'menu' 			=> 'main-nav',
-				  'depth' 			=> 3,
-				  'container'		=> false,
-				  'container_class'	=> 'collapse navbar-collapse navbar-ex1-collapse',
-				  'menu_class' 		=> 'nav navbar-nav pull-right',
-				  //Process nav menu using our custom nav walker
-				  'walker' 		=> new wp_bootstrap_navwalker())
-				);
-				?>
+			   <ul class="nav navbar-nav pull-right" id="menu-main-nav">
+			   	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home"><a href="#">Logout</a></li>
+			
+			   </ul>
 		  </div>
 </nav>

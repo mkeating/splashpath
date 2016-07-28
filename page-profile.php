@@ -8,7 +8,7 @@
  */
 
 get_header(); 
-get_template_part( 'template-parts/reg-nav', get_post_format() );?>
+get_template_part( 'template-parts/prof-nav', get_post_format() );?>
 
 
 
@@ -84,7 +84,7 @@ get_template_part( 'template-parts/reg-nav', get_post_format() );?>
 
 <div class="row" id="completed-surveys"> 
 
-
+<h2 class="text-center">You've been a participant since 12/3/13!</h2>
 <h2 class="text-center">Completed Surveys</h2>
 
         
