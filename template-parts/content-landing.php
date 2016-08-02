@@ -29,7 +29,6 @@
 				?>
 
 		</div>
-		<div class="button-buffer"></div>
 		
 				
 			<script type="text/javascript">
