@@ -326,7 +326,8 @@ input,
 select,
 textarea {
 	color: #373D3F;
-	font-family: 'Raleway', sans-serif;
+	/*font-family: 'Raleway', sans-serif;*/
+	font-family: 'Josefin Sans', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -343,7 +344,8 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Raleway', sans-serif;
+	/*font-family: 'Raleway', sans-serif;*/
+	font-family: 'Josefin Sans', sans-serif;
 	clear: both;
 	line-height: 1.3em;
 	margin-top: 2.5rem;
@@ -743,6 +745,7 @@ a:active {
 	background-color: #232D32;
 	border: none;
 	margin-bottom: 0;
+	min-height: 70px;
 }
 
 .navbar-header {
@@ -768,9 +771,10 @@ a:active {
 
 
 .menu-item > a {
-	font-family: 'Raleway', sans-serif;
-	font-size: 1.3em;
-	font-weight: bold;
+	/*font-family: 'Raleway', sans-serif;*/
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.5em;
+	/*font-weight: bold;*/
 	color: white;
 	min-width: 80px;
 	height: 100%;
@@ -1001,11 +1005,11 @@ a:active {
 
 	}
 
-	@media screen and (max-width: 500px) and (min-height: 568px) {
+	/*@media screen and (max-width: 500px) and (min-height: 568px) {
 		.site-branding {
 			padding-top: 90px;
 		}
-	}
+	}*/
 
 .logo {
 
@@ -1027,7 +1031,8 @@ a:active {
 
 .site-title { 
 	margin: .7em  1em 0;
-	font-family: 'Raleway', sans-serif;
+	/*font-family: 'Raleway', sans-serif;*/
+	font-family: 'Josefin Sans', sans-serif;
 	font-size: 5rem;
 	font-weight: bold;
 	line-height: 1.3em;
@@ -1619,8 +1624,13 @@ object {
 	
 }
 
+.error {
+	font-size: 1rem;
+	color:red !important;
+}
+
 #join-the-study *{
-	color: white !important;
+	color: white;
 
 }
 
@@ -1880,21 +1890,23 @@ article > .entry-content {
 
 .testimonial-1 {
 	font-size: 2.1em;
+	line-height: 1.5em;
 	text-align: right;
 	color: #9053B5;
 }
 
 .testimonial-2 {
 	font-size: 2.1em;
+	line-height: 1.5em;
 	text-align: left;
-	color: #FFB6C1 !important;
+	color: #9053B5 !important;
 }
 
 
 .testimonial-2 > p{
 	font-size: .8em;
 	text-align: left;
-	color: #FFB6C1 !important;
+	color: #9053B5 !important;
 }
 
 .container-fluid {
@@ -1932,23 +1944,25 @@ article {
 
 .current-survey-panel{
 
-	background: url(http://localhost/wordpress/wp-content/uploads/2016/07/diet-wide.jpg) no-repeat center center;
+	background: url(/wordpress/wp-content/uploads/2016/07/diet-wide.jpg) no-repeat center center;
 	background-size: cover;
-	width: 60%;
-	min-height: 250px;
+	width: 50%;
+	min-height: 300px;
 	margin: 0 auto;
 	position: relative;
-	border: 2px solid transparent;
+	
+	/*border: 2px solid transparent;*/
 }
-
+/*
 .current-survey-panel:hover{
-	border: 2px solid #44CD44;
-}
+	
+	background-size: 150% 150%;
+}*/
 
 @media screen and (max-width: 800px) {
 
 	.current-survey-panel {
-		background: url(http://localhost/wordpress/wp-content/uploads/2016/07/diet-portrait.jpg) no-repeat center center;
+		background: url(/wordpress/wp-content/uploads/2016/07/diet-portrait.jpg) no-repeat center center;
 		background-size: cover;
 		min-height: 400px;
 		width: 90%;
@@ -1963,6 +1977,7 @@ article {
 	width: 100%;
 	padding: 10px;
 	color: #373D3F;
+	
 	font-weight: 600;
 }
 
@@ -2011,8 +2026,6 @@ section#profile {
 	margin-top: 0;
 }
 
-
-
 .completed-survey {
 	background-color: #649F86;
 	color: white;
@@ -2020,7 +2033,6 @@ section#profile {
 	margin: 10px auto;
 	padding: 10px;
 	max-width: 500px;
-
 }
 
 #loginform > p > input{

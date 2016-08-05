@@ -60,7 +60,7 @@
 
 				</div><!-- .site-info -->
 
-				<div class="col-lg-4 col-med-4 col-sm-4 col-xs-12 footer-section text-center">
+				<div class="col-lg-4 col-med-4 col-sm-4 col-xs-12 footer-section ">
 					<div style="margin: 0 auto; width: 80%">
 						<img src="http://localhost/wordpress/wp-content/uploads/2016/07/hthcsph_white.gif" /> <br /><br />
 						<img src="http://localhost/wordpress/wp-content/uploads/2016/07/hms_white.gif" /><br /><br />
@@ -82,7 +82,8 @@
 						Fax: 617-525-2008<br />
 
 						&copy;2016<br/>
-						<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'nhs3_s' ), 'nhs3_s', '<a href="http://underscores.me/" rel="designer">Michael Keating</a>' ); ?> 
+						<!--<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'nhs3_s' ), 'nhs3_s', '<a href="http://underscores.me/" rel="designer">Michael Keating</a>' ); ?> -->
+						Designed and developed by Michael Keating
 						</span>
 				</div>
 

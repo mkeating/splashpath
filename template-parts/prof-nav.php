@@ -18,12 +18,13 @@
 		      <span class="icon-bar"></span> 
 		      <span class="icon-bar"></span> 
 		    </button> 
-		    <a class="navbar-brand" href="<?php bloginfo('url')?>"><img src="<?php echo get_theme_mod( 'site_logo' ); ?>" class="brand-logo"/> </a>
+		    <a class="navbar-brand" style="display:inline;" href="<?php bloginfo('url')?>"><img src="<?php echo get_theme_mod( 'site_logo' ); ?>" class="brand-logo"/> </a>
 		  </div> 
 		  <!-- Collect the nav links, forms, and other content for toggling --> 
 		  <div class="collapse navbar-collapse navbar-ex1-collapse"> 
 			   <ul class="nav navbar-nav pull-right" id="menu-main-nav">
-			   	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home"><a href="#">Logout</a></li>
+			   	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home"><a href="<?php bloginfo('url')?>/contact">Contact</a></li>
+			   	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home"><a href="<?php bloginfo('url')?>">Logout</a></li>
 			
 			   </ul>
 		  </div>

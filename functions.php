@@ -147,7 +147,10 @@ function nhs3_s_scripts() {
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array( 'jquery' ) );
 	
 	//Adding fonts
-	wp_enqueue_style( 'nhs-fonts', 'https://fonts.googleapis.com/css?family=Raleway|Merriweather' );
+	#wp_enqueue_style( 'nhs-fonts', 'https://fonts.googleapis.com/css?family=Raleway|Merriweather' );
+	wp_enqueue_style( 'nhs-fonts', 'http://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext' );
+	
+
 	
 	//Font-Awesome glyphs
 	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
@@ -195,7 +198,8 @@ add_action('init', 'landing_section');
 
 function add_landing_metaboxes() {
 
-	add_meta_box('landing_bg_img', 'Landing Section Background Image', 'landing_bg_img', 'landing_section', 'normal', 'default' );
+	add_meta_box('landing_bg_img_wide', 'Landing Section Background Image for Wide Screens', 'landing_bg_img_wide', 'landing_section', 'normal', 'default' );
+	add_meta_box('landing_bg_img_portrait', 'Landing Section Background Image', 'landing_bg_img_portrait', 'landing_section', 'normal', 'default' );
 	add_meta_box('landing_bg', 'Landing Section Background Color', 'landing_bg', 'landing_section', 'normal', 'default' );
 	add_meta_box('landing_nxt_btn_text', 'Next Button Text', 'landing_nxt_btn_text', 'landing_section', 'normal', 'default' );
 	add_meta_box('landing_nxt_btn_target', 'Next Button Target', 'landing_nxt_btn', 'landing_section', 'normal', 'default' );
@@ -215,15 +219,28 @@ function landing_bg() {
 }
 
 
-function landing_bg_img() {
+//widescreen backgorund
+function landing_bg_img_wide() {
 	global $post;
 
 	echo '<input type="hidden" name="landingmeta_noncename" id="landingmeta_noncename" value="'.wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
 
-	$background_img = get_post_meta($post->ID, '_background_img', true);
+	$background_img_wide = get_post_meta($post->ID, '_background_img_wide', true);
 
 	echo '<input type="text" name="_background_img" value="' . $background_img . '" class="widefat" />';
 }
+
+//portrait background
+function landing_bg_img_portrait() {
+	global $post;
+
+	echo '<input type="hidden" name="landingmeta_noncename" id="landingmeta_noncename" value="'.wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+
+	$background_img_portrait = get_post_meta($post->ID, '_background_img_portrait', true);
+
+	echo '<input type="text" name="_background_img" value="' . $background_img_portrait . '" class="widefat" />';
+}
+
 
 function landing_nxt_btn() {
 	global $post;
@@ -258,7 +275,8 @@ function save_landing_meta($post_id = false, $post = false) {
 		return $post->ID;
 
 	$landing_meta['_background'] = $_POST['_background'];
-	$landing_meta['_background_img'] = $_POST['_background_img'];
+	$landing_meta['_background_img_wide'] = $_POST['_background_img_wide'];
+	$landing_meta['_background_img_portrait'] = $_POST['_background_img_portrait'];
 	$landing_meta['_nxt_btn_target'] = $_POST['_nxt_btn_target'];
 	$landing_meta['_nxt_btn_text'] = $_POST['_nxt_btn_text'];
 

@@ -45,7 +45,7 @@ get_template_part( 'template-parts/prof-nav', get_post_format() );?>
     echo 'NHS3ID: ' . $current_user->NHSID . '<br />';*/
 ?>
 
-<h2 class="text-center">Hi <?php echo $username ?>! Your current survey is:</h2>
+<h2 class="text-center">Hi Jane! Your current survey is:</h2>
 <a href="" class="survey-link">
     <div class="current-survey-panel"> 
         <div class="current-survey-image">
@@ -64,23 +64,29 @@ get_template_part( 'template-parts/prof-nav', get_post_format() );?>
     <button class="btn" id="update-btn">Click here!</button>
 </a>
 
+  <h2 class="text-center">Need to change your password?</h2>
+<div class="content-row">
 
-<h2 class="text-center">Need to change your password?</h2>
-<div class="registration-box update-box">
- <form>
-    <label for="newPassord">New Password:</label>
-    <input type="password" class="form-control" id="inputPassword" >
+  <div class="registration-box update-box">
+   <form>
+      <label for="newPassord">New Password:</label>
+      <br>
+      <input type="password" class="form-control" id="inputPassword" >
+      <br>
+      <label for="newPassordConfirm">Confirm New Password:</label>
+      <br>
+      <input type="password" class="form-control" id="inputPassword" >
+      <br>
+   <div class="row-fluid text-center">
+        <button type="submit" class="btn" id="reg-submit-btn"> SUBMIT </button>
+  </div>
 
-    <label for="newPassordConfirm">Confirm New Password:</label>
-    <input type="password" class="form-control" id="inputPassword" >
-    <br />
- <div class="row-fluid text-center">
-      <button type="submit" class="btn" id="reg-submit-btn"> SUBMIT </button>
+  </form>
+
+  </div>
+
 </div>
 
-</form>
-
-</div>
 
 <div class="row" id="completed-surveys"> 
 
